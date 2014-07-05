@@ -1,6 +1,7 @@
 # This script converts the input ssf format data into conll format
 # This script takes input the ssf-file name which has to be converted
 # as a command line argument and outputs the conll format into temp.conll
+#by Jayend Rakesh and Vishnu
 
 import os,sys,re
 
