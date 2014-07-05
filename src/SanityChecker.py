@@ -1,8 +1,6 @@
 #!/usr/local/bin/python
 import os, sys, re
 
-### Written by Riyaz Ahmad Bhat, Ph.D-Cl ####
-
 rel = re.compile(r"(?<=rel=)(.*?)\s|(?<=rel=)(.*)\b")
 name = re.compile('(?<=name=)".*?"')
 
@@ -135,7 +133,7 @@ def Checker(Strbuffer):
 				pass
 
 	return AllSentences, ErrorSentences
-###	Calling the function as : x,y = SanityChecker.Checker(filepointer)    ###
+###	Call the function as : x,y = SanityChecker.Checker(filepointer)    ###
 
 '''
 if __name__ == "__main__":
