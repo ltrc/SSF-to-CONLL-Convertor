@@ -1,6 +1,5 @@
 #!/usr/bin/python
 #-*- coding:utf-8 -*-
-## RIYAZ AHMAD BHAT Ph.D CL riyaz.bhat@research.iiit.ac.in ##
 
 import re
 import os
