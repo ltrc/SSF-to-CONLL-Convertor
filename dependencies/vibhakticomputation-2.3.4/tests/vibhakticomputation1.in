@@ -1,0 +1,286 @@
+<Sentence id="1">
+1	((	NP	<fs af='bAra,adv,,,,,,' head="bAra">
+1.1	eka	QC	<fs af='eka,adj,any,any,,,any,'>
+1.2	bAra	RP	<fs af='bAra,adv,,,,,,' name="bAra">
+	))		
+2	((	NP	<fs af='use,unk,,,,,,' head="use">
+2.1	use	PRP	<fs af='use,unk,,,,,,' name="use">
+	))		
+3	((	JJP	<fs af='pawA,n,m,sg,,o,,' head="pawA">
+3.1	pawA	JJ	<fs af='pawA,n,m,sg,,o,,' name="pawA">
+	))		
+4	((	VGF	<fs af='calA,v,any,any,any,,,d' head="calA">
+4.1	calA	VM	<fs af='calA,v,any,any,any,,,d' name="calA">
+	))		
+5	((	CCP	<fs af='ki,Avy,,,,,,' head="ki">
+5.1	ki	CC	<fs af='ki,Avy,,,,,,' name="ki">
+	))		
+6	((	NP	<fs af='rAjya,n,m,sg,,o,,' head="rAjya">
+6.1	rAjya	NN	<fs af='rAjya,n,m,sg,,o,,' name="rAjya">
+6.2	meM	PSP	<fs af='meM,pn,,,,,,'>
+	))		
+7	((	NP	<fs af='sO,n,m,sg,,o,,' head="sO">
+7.1	wIna	QC	<fs af='wIna,n,m,sg,,o,,'>
+7.2	sO	QC	<fs af='sO,n,m,sg,,o,,' name="sO">
+	))		
+8	((	VGF	<fs af='jagaheM,unk,,,,,,' head="jagaheM">
+8.1	jagaheM	VM	<fs af='jagaheM,unk,,,,,,' name="jagaheM">
+	))		
+9	((	JJP	<fs af='KAlI,adj,f,any,,,any,' head="KAlI">
+9.1	KAlI	JJ	<fs af='KAlI,adj,f,any,,,any,' name="KAlI">
+9.2	hEM	VAUX	<fs af='hE,v,any,pl,1,,,hE'>
+9.3	.	SYM	<fs af='&sdot;,punc,,,,,,'>
+	))		
+</Sentence>
+<Sentence id="1">
+1	((	NP	<fs af='saMskqwi,n,f,sg,,o,,' head="saMskqwi">
+1.1	BArawIya	JJ	<fs af='BArawIya,n,m,sg,,o,,'>
+1.2	saMskqwi	NN	<fs af='saMskqwi,n,f,sg,,o,,' name="saMskqwi">
+1.3	meM	PSP	<fs af='meM,pn,,,,,,'>
+	))		
+2	((	NP	<fs af='parva,n,m,pl,,d,,' head="parvoM">
+2.1	parvoM	NN	<fs af='parva,n,m,pl,,d,,' name="parvoM">
+2.2	kA	PSP	<fs af='kA,n,m,sg,,o,7,'>
+	))		
+3	((	NP	<fs af='sWAna,n,m,sg,,o,,' head="sWAna">
+3.1	viSeRa	JJ	<fs af='viSeRa,n,m,sg,,o,,'>
+3.2	sWAna	NN	<fs af='sWAna,n,m,sg,,o,,' name="sWAna">
+	))		
+4	((	VGF	<fs af='hE,v,any,sg,2,,,hE' head="hE">
+4.1	hE	VAUX	<fs af='hE,v,any,sg,2,,,hE' name="hE">
+4.2	.	SYM	<fs af='&sdot;,punc,,,,,,'>
+	))		
+</Sentence>
+<Sentence id="1">
+1	((	NP	<fs af='vyApArI,n,m,sg,,o,,' head="vyApArI">
+1.1	eka	QC	<fs af='eka,adj,any,any,,,any,'>
+1.2	vyApArI	NN	<fs af='vyApArI,n,m,sg,,o,,' name="vyApArI">
+1.3	ko	PSP	<fs af='ko,pn,,,,,,'>
+	))		
+2	((	NP	<fs af='nIMxa,n,f,sg,,o,,' head="nIMxa">
+2.1	nIMxa	NN	<fs af='nIMxa,n,f,sg,,o,,' name="nIMxa">
+	))		
+3	((	VGF	<fs af='na,adv,,,,,,' head="na">
+3.1	na	NEG	<fs af='na,adv,,,,,,' name="na">
+	))		
+4	((	VGNN	<fs af='A,v,m,pl,any,,,nA' head="Ane">
+4.1	Ane	VM	<fs af='A,v,m,pl,any,,,nA' name="Ane">
+4.2	kI	PSP	<fs af='kA,n,f,sg,,o,7,'>
+	))		
+5	((	NP	<fs af='bImArI,n,f,sg,,o,,' head="bImArI">
+5.1	bImArI	NN	<fs af='bImArI,n,f,sg,,o,,' name="bImArI">
+	))		
+6	((	VGF	<fs af='WA,v,f,sg,any,,,WA' head="WI">
+6.1	WI	VM	<fs af='WA,v,f,sg,any,,,WA' name="WI">
+6.2	.	SYM	<fs af='&sdot;,punc,,,,,,'>
+	))		
+</Sentence>
+<Sentence id="1">
+1	((	NP	<fs af='bAra,adv,,,,,,' head="bAra">
+1.1	eka	QC	<fs af='eka,adj,any,any,,,any,'>
+1.2	bAra	RP	<fs af='bAra,adv,,,,,,' name="bAra">
+	))		
+2	((	NP	<fs af='piwA,n,m,sg,,o,,' head="piwA">
+2.1	piwA	NN	<fs af='piwA,n,m,sg,,o,,' name="piwA">
+	))		
+3	((	NP	<fs af='apanI,n,f,sg,,o,,' head="apanI">
+3.1	apanI	PRP	<fs af='apanI,n,f,sg,,o,,' name="apanI">
+	))		
+4	((	NP	<fs af='puwrI,n,f,pl,,d,,' head="puwriyoM">
+4.1	xonoM	NN	<fs af='xonA,n,m,pl,,d,,'>
+4.2	puwriyoM	NN	<fs af='puwrI,n,f,pl,,d,,' name="puwriyoM">
+4.3	se	PSP	<fs af='se,v,any,any,any,,,d'>
+	))		
+5	((	VGNN	<fs af='mila,v,m,pl,any,,,nA' head="milane">
+5.1	milane	VM	<fs af='mila,v,m,pl,any,,,nA' name="milane">
+5.2	gayA	VAUX	<fs af='gayA,unk,,,,,,'>
+5.3	.	SYM	<fs af='&sdot;,punc,,,,,,'>
+	))		
+</Sentence>
+<Sentence id="1">
+1	((	NP	<fs af='mahAvIra,adj,any,any,,,any,' head="mahAvIra">
+1.1	mahAvIra	XC	<fs af='mahAvIra,adj,any,any,,,any,' name="mahAvIra">
+	))		
+2	((	VGF	<fs af='jayaMwI,n,f,sg,,o,,' head="jayaMwI">
+2.1	jayaMwI	VM	<fs af='jayaMwI,n,f,sg,,o,,' name="jayaMwI">
+	))		
+3	((	NP	<fs af='Xarma,n,m,sg,,o,,' head="Xarma">
+3.1	jEna	NN	<fs af='jEna,n,m,sg,,o,,'>
+3.2	Xarma	NN	<fs af='Xarma,n,m,sg,,o,,' name="Xarma">
+3.3	meM	PSP	<fs af='meM,pn,,,,,,'>
+	))		
+4	((	NP	<fs af='viSvAsa,n,m,sg,,o,,' head="viSvAsa">
+4.1	viSvAsa	NN	<fs af='viSvAsa,n,m,sg,,o,,' name="viSvAsa">
+	))		
+5	((	VGNN	<fs af='kara,v,m,pl,any,,,nA' head="karane">
+5.1	karane	VM	<fs af='kara,v,m,pl,any,,,nA' name="karane">
+5.2	vAle	VAUX	<fs af='vAlA,n,m,pl,,o,,'>
+	))		
+6	((	NP	<fs af='loga,n,m,pl,,d,,' head="logoM">
+6.1	logoM	NN	<fs af='loga,n,m,pl,,d,,' name="logoM">
+6.2	kA	PSP	<fs af='kA,n,m,sg,,o,7,'>
+	))		
+7	((	NP	<fs af='eka,adj,any,any,,,any,' head="eka">
+7.1	eka	QC	<fs af='eka,adj,any,any,,,any,' name="eka">
+	))		
+8	((	NP	<fs af='pramuKa,n,m,sg,,o,,' head="pramuKa">
+8.1	pramuKa	JJ	<fs af='pramuKa,n,m,sg,,o,,' name="pramuKa">
+	))		
+9	((	NP	<fs af='wyohAra,n,m,sg,,o,,' head="wyohAra">
+9.1	wyohAra	NN	<fs af='wyohAra,n,m,sg,,o,,' name="wyohAra">
+	))		
+10	((	VGF	<fs af='hE,v,any,sg,2,,,hE' head="hE">
+10.1	hE	VAUX	<fs af='hE,v,any,sg,2,,,hE' name="hE">
+10.2	.	SYM	<fs af='&sdot;,punc,,,,,,'>
+	))		
+</Sentence>
+<Sentence id="1">
+1	((	NP	<fs af='yaha,pn,any,pl,3,o,,' head="ina">
+1.1	ina	DEM	<fs af='yaha,pn,any,pl,3,o,,' name="ina">
+	))		
+2	((	NP	<fs af='pariyojanA,n,f,pl,,d,,' head="pariyojanAoM">
+2.1	pariyojanAoM	NN	<fs af='pariyojanA,n,f,pl,,d,,' name="pariyojanAoM">
+2.2	ko	PSP	<fs af='ko,pn,,,,,,'>
+	))		
+3	((	NP	<fs af='sArvajanika,adj,any,any,,,any,' head="sArvajanika">
+3.1	sArvajanika	JJ	<fs af='sArvajanika,adj,any,any,,,any,' name="sArvajanika">
+	))		
+4	((	NP	<fs af='BAgIxArI,unk,,,,,,' head="BAgIxArI">
+4.1	nijI	JJ	<fs af='nijI,n,f,sg,,o,,'>
+4.2	BAgIxArI	NN	<fs af='BAgIxArI,unk,,,,,,' name="BAgIxArI">
+4.3	meM	PSP	<fs af='meM,pn,,,,,,'>
+	))		
+5	((	JJP	<fs af='sWApiwa,n,m,sg,,o,,' head="sWApiwa">
+5.1	sWApiwa	JJ	<fs af='sWApiwa,n,m,sg,,o,,' name="sWApiwa">
+	))		
+6	((	VGF	<fs af='kara,v,m,sg,any,,,yA' head="kiyA">
+6.1	kiyA	VM	<fs af='kara,v,m,sg,any,,,yA' name="kiyA">
+6.2	jAnA	VAUX	<fs af='jAna,v,m,sg,any,,,yA'>
+6.3	hE	VAUX	<fs af='hE,v,any,sg,2,,,hE'>
+6.4	.	SYM	<fs af='&sdot;,punc,,,,,,'>
+	))		
+</Sentence>
+<Sentence id="1">
+1	((	NP	<fs af='bAjAra,n,m,pl,,d,,' head="bAjAroM">
+1.1	Seyara	NNP	<fs af='Seyara,n,m,sg,,o,,'>
+1.2	bAjAroM	NN	<fs af='bAjAra,n,m,pl,,d,,' name="bAjAroM">
+1.3	kI	PSP	<fs af='kA,n,f,sg,,o,7,'>
+	))		
+2	((	VGF	<fs af='uTApataka,unk,,,,,,' head="uTApataka">
+2.1	uTApataka	VM	<fs af='uTApataka,unk,,,,,,' name="uTApataka">
+2.2	ke	PSP	<fs af='kA,n,m,sg,,d,7,'>
+	))		
+3	((	VGF	<fs af='cala,v,m,pl,any,,,wA' head="calawe">
+3.1	calawe	VM	<fs af='cala,v,m,pl,any,,,wA' name="calawe">
+	))		
+4	((	NP	<fs af='vAkahArta,unk,,,,,,' head="vAkahArta">
+4.1	vAkahArta	XC	<fs af='vAkahArta,unk,,,,,,' name="vAkahArta">
+	))		
+5	((	NP	<fs af='mUlya,n,m,sg,,o,,' head="mUlya">
+5.1	hAspitala	NNP	<fs af='hAspitala,unk,,,,,,'>
+5.2	ne	PSP	<fs af='ne,pn,,,,,,'>
+5.3	mUlya	NN	<fs af='mUlya,n,m,sg,,o,,' name="mUlya">
+	))		
+6	((	NP	<fs af='xAyarA,n,m,pl,,o,,' head="xAyare">
+6.1	xAyare	NN	<fs af='xAyarA,n,m,pl,,o,,' name="xAyare">
+6.2	meM	PSP	<fs af='meM,pn,,,,,,'>
+	))		
+7	((	NP	<fs af='kamI,n,f,sg,,o,,' head="kamI">
+7.1	kamI	NN	<fs af='kamI,n,f,sg,,o,,' name="kamI">
+7.2	kI	PSP	<fs af='kA,n,f,sg,,o,7,'>
+	))		
+8	((	VGF	<fs af='WA,v,f,sg,any,,,WA' head="WI">
+8.1	WI	VM	<fs af='WA,v,f,sg,any,,,WA' name="WI">
+8.2	.	SYM	<fs af='&sdot;,punc,,,,,,'>
+	))		
+</Sentence>
+<Sentence id="1">
+1	((	NP	<fs af='spArtA,unk,,,,,,' head="spArtA">
+1.1	grIsa	QC	<fs af='grIsa,unk,,,,,,'>
+1.2	xeSa	NN	<fs af='xeSa,n,m,sg,,o,,'>
+1.3	ke	PSP	<fs af='kA,n,m,sg,,d,7,'>
+1.4	spArtA	NN	<fs af='spArtA,unk,,,,,,' name="spArtA">
+	))		
+2	((	NP	<fs af='rAjya,n,m,sg,,o,,' head="rAjya">
+2.1	rAjya	NN	<fs af='rAjya,n,m,sg,,o,,' name="rAjya">
+2.2	meM	PSP	<fs af='meM,pn,,,,,,'>
+	))		
+3	((	NP	<fs af='pidArtasa,unk,,,,,,' head="pidArtasa">
+3.1	pidArtasa	XC	<fs af='pidArtasa,unk,,,,,,' name="pidArtasa">
+	))		
+4	((	NP	<fs af='nAma,n,m,sg,,o,,' head="nAma">
+4.1	nAma	NN	<fs af='nAma,n,m,sg,,o,,' name="nAma">
+4.2	kA	PSP	<fs af='kA,n,m,sg,,o,7,'>
+	))		
+5	((	NP	<fs af='eka,adj,any,any,,,any,' head="eka">
+5.1	eka	QC	<fs af='eka,adj,any,any,,,any,' name="eka">
+	))		
+6	((	NP	<fs af='nOjavAna,n,m,sg,,o,,' head="nOjavAna">
+6.1	nOjavAna	JJ	<fs af='nOjavAna,n,m,sg,,o,,' name="nOjavAna">
+	))		
+7	((	VGF	<fs af='raha,v,m,sg,any,,,wA' head="rahawA">
+7.1	rahawA	VM	<fs af='raha,v,m,sg,any,,,wA' name="rahawA">
+7.2	WA	VAUX	<fs af='WA,v,m,sg,any,,,WA'>
+7.3	.	SYM	<fs af='&sdot;,punc,,,,,,'>
+	))		
+</Sentence>
+<Sentence id="1">
+1	((	NP	<fs af='samaya,n,m,sg,,o,,' head="samaya">
+1.1	kuCa	QF	<fs af='kuCa,adj,any,any,,,o,'>
+1.2	samaya	NN	<fs af='samaya,n,m,sg,,o,,' name="samaya">
+	))		
+2	((	NP	<fs af='jayaprakASa,unk,,,,,,' head="jayaprakASa">
+2.1	pUrva	NST	<fs af='pUrva,adv,,,,,,'>
+2.2	jayaprakASa	NN	<fs af='jayaprakASa,unk,,,,,,' name="jayaprakASa">
+	))		
+3	((	NP	<fs af='mAnasa,n,m,sg,,o,,' head="mAnasa">
+3.1	mAnasa	NN	<fs af='mAnasa,n,m,sg,,o,,' name="mAnasa">
+3.2	ne	PSP	<fs af='ne,pn,,,,,,'>
+	))		
+4	((	NP	<fs af='prakAra,n,m,sg,,o,,' head="prakAra">
+4.1	isI	DEM	<fs af='isI,unk,,,,,,'>
+4.2	prakAra	NN	<fs af='prakAra,n,m,sg,,o,,' name="prakAra">
+4.3	ke	PSP	<fs af='kA,n,m,sg,,d,7,'>
+	))		
+5	((	NP	<fs af='sammelana,n,m,sg,,o,,' head="sammelana">
+5.1	eka	QC	<fs af='eka,adj,any,any,,,any,'>
+5.2	sammelana	NN	<fs af='sammelana,n,m,sg,,o,,' name="sammelana">
+5.3	kA	PSP	<fs af='kA,n,m,sg,,o,7,'>
+	))		
+6	((	JJP	<fs af='saPala,n,m,sg,,o,,' head="saPala">
+6.1	saPala	JJ	<fs af='saPala,n,m,sg,,o,,' name="saPala">
+	))		
+7	((	NP	<fs af='maMcana,n,m,sg,,o,,' head="maMcana">
+7.1	maMcana	NN	<fs af='maMcana,n,m,sg,,o,,' name="maMcana">
+	))		
+8	((	VGF	<fs af='kara,v,m,sg,any,,,yA' head="kiyA">
+8.1	kiyA	VM	<fs af='kara,v,m,sg,any,,,yA' name="kiyA">
+8.2	WA	VAUX	<fs af='WA,v,m,sg,any,,,WA'>
+8.3	.	SYM	<fs af='&sdot;,punc,,,,,,'>
+	))		
+</Sentence>
+<Sentence id="1">
+1	((	NP	<fs af='PitakarI,n,f,sg,,o,,' head="PitakarI">
+1.1	sAXAraNa	JJ	<fs af='sAXAraNa,n,m,sg,,o,,'>
+1.2	PitakarI	NN	<fs af='PitakarI,n,f,sg,,o,,' name="PitakarI">
+1.3	kA	PSP	<fs af='kA,n,m,sg,,o,7,'>
+	))		
+2	((	NP	<fs af='rAsAyanika,adj,any,any,,,any,' head="rAsAyanika">
+2.1	rAsAyanika	JJ	<fs af='rAsAyanika,adj,any,any,,,any,' name="rAsAyanika">
+	))		
+3	((	NP	<fs af='nAma,n,m,sg,,o,,' head="nAma">
+3.1	nAma	NN	<fs af='nAma,n,m,sg,,o,,' name="nAma">
+	))		
+4	((	NP	<fs af='poteSiyama,unk,,,,,,' head="poteSiyama">
+4.1	poteSiyama	NNP	<fs af='poteSiyama,unk,,,,,,' name="poteSiyama">
+4.2	elyuminiyama	PRP	<fs af='elyuminiyama,unk,,,,,,'>
+	))		
+5	((	NP	<fs af='salPeta,unk,,,,,,' head="salPeta">
+5.1	salPeta	NN	<fs af='salPeta,unk,,,,,,' name="salPeta">
+	))		
+6	((	VGF	<fs af='ho,v,m,sg,any,,,wA' head="howA">
+6.1	howA	VM	<fs af='ho,v,m,sg,any,,,wA' name="howA">
+6.2	hEM	VAUX	<fs af='hE,v,any,pl,1,,,hE'>
+6.3	.	SYM	<fs af='&sdot;,punc,,,,,,'>
+	))		
+</Sentence>

@@ -1,0 +1,31 @@
+<Sentence id="1">
+1	((	NP	<fs af='viswAra,n,m,sg,,o,,' head=viswAra name="PS">
+1.1	viswAra	NN	<fs af='viswAra,n,m,sg,,o,,' name=viswAra>
+1.2	ke	PSP	<fs af='kA,n,m,sg,,d,7,' name=ke>
+1.3	sAWa	NST	<fs af='sAWa,adv,,,,,,' name=sAWa>
+1.4	hI	RP	<fs af='hI,adv,,,,,,' name=hI>
+	))		
+</Sentence>
+<Sentence id="2">
+1	((	NP	<fs af='cAzxanI,n,f,sg,,o,,' head=cAzxanI>
+1.1	lAla	JJ	<fs af='lAla,adj,any,any,,,any,' name=lAla>
+1.2	ilA	NN	<fs af='ilA,n,m,sg,,o,,' name=ilA>
+1.3	ke	PSP	<fs af='kA,n,m,sg,,d,7,' name=ke>
+1.4	pAsa	NST	<fs af='pAsa,adv,,,,,,' name=pAsa>
+1.5	sWiwa	JJ	<fs af='sWiwa,n,m,sg,,o,,' name=sWiwa>
+1.6	cAzxanI	NN	<fs af='cAzxanI,n,f,sg,,o,,' name=cAzxanI>
+	))		
+</Sentence>
+<Sentence id="3">
+1	((	NP	<fs af='ora,nst,f,,3,d,,' head=ora>
+1.1	cAroM	QC	<fs af='cAra,num,m,pl,3,d,,' name=cAroM>
+1.2	ora	NST	<fs af='ora,nst,f,,3,d,,' name=ora>
+	))		
+</Sentence>
+<Sentence id="4">
+1	((	NP	<fs af='vaha,pn,any,sg,3,o,ke,' head=usa>
+1.1	usa	PRP	<fs af='vaha,pn,any,sg,3,o,ke,' name=usa>
+1.2	se	PSP	<fs af='se,psp,any,sg,3,o,ke,' name=se>
+1.3	Age	NST	<fs af='Age,nst,m,,3,d,,' name=Age>
+	))		
+</Sentence>

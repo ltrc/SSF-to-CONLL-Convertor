@@ -1,0 +1,34 @@
+<Sentence id="1">
+1	((	NP	
+1.1	bil	NN	<fs af='bil,n,,sg,,d,0,0'>
+	))		
+2	((	NP	
+2.1	awanini	PRP	<fs af='awanu,pn,m,sg,3,,nu,nu'>
+2.2	<1+2>/5>	SYM	<fs af='&frasl;,punc,,,,,,'>
+	))		
+3	((	NP	
+3.1	wanani	PRP	<fs af='wAnu,pn,,sg,,,ni,nu'>
+	))		
+4	((	VGF	
+4.1	xveRiswAdu	VM	<fs af='xveRiMcu,v,m,sg,3,,wA,wA'>
+4.2	<1+2>/5/	SYM	<fs af='&frasl;,punc,,,,,,'>
+4.3	.	SYM	<fs af='&dot;,punc,,,,,,'>
+	))		
+</Sentence>
+<Sentence id="1">
+1	((	NP	
+1.1	bil	NN	<fs af='bil,n,,sg,,d,0,0'>
+	))		
+2	((	NP	
+2.1	awanini	PRP	<fs af='awanu,pn,m,sg,3,,nu,nu'>
+2.2	/	SYM	<fs af='&frasl;,punc,,,,,,'>
+	))		
+3	((	NP	
+3.1	wanani	PRP	<fs af='wAnu,pn,,sg,,,ni,nu'>
+	))		
+4	((	VGF	
+4.1	xveRiswAdu	VM	<fs af='xveRiMcu,v,m,sg,3,,wA,wA'>
+4.2	.	SYM	<fs af='&dot;,punc,,,,,,'>
+	))		
+</Sentence>
+

@@ -1,0 +1,32 @@
+<Sentence id="1">
+1	((	VGNN	<fs af='PerAra,adj,,,,,,' poslcat="NM" head=PerAra>
+1.1	PerAra	VM	<fs af='PerAra,adj,,,,,,' name=PerAra poslcat="NM">
+	))		
+2	((	NP	<fs af='paWa,n,,sg,,d,e,e' head=paWe>
+2.1	paWe	NN	<fs af='paWa,n,,sg,,d,e,e' name=paWe>
+	))		
+3	((	NP	<fs af='sikima,n,,sg,,o,era,era' head=sikimera>
+3.1	sikimera	NN	<fs af='sikima,n,,sg,,o,era,era' name=sikimera>
+3.2	sarbeAcca	NST	<fs af='sarbeAcca,unk,,,,,,' name=sarbeAcca poslcat="NM">
+	))		
+4	((	NP	<fs af='leka,n,,sg,,d,0,0' poslcat="NM" head=leka>
+4.1	leka	XC	<fs af='leka,n,,sg,,d,0,0' name=leka poslcat="NM">
+	))		
+5	((	NP	<fs af='gurudambA,n,,sg,,o,era,era' head=gurudambAra>
+5.1	gurudambAra	NN	<fs af='gurudambA,n,,sg,,o,era,era' name=gurudambAra>
+	))		
+6	((	NP	<fs af='ye,pn,,sg,,d,ke,ke' head=yAke>
+6.1	yAke	PRP	<fs af='ye,pn,,sg,,d,ke,ke' name=yAke>
+	))		
+7	((	NP	<fs af='aneke,unk,,,,,,' poslcat="NM" head=aneke>
+7.1	aneke	PRP	<fs af='aneke,unk,,,,,,' name=aneke poslcat="NM">
+	))		
+8	((	NP	<fs af='leka,n,,sg,,d,0,0' head=lekao>
+8.1	uiSiM	NNP	<fs af='uiSiM,unk,,,,,,' name=uiSiM poslcat="NM">
+8.2	lekao	NN	<fs af='leka,n,,sg,,d,0,0' name=lekao>
+	))		
+9	((	VGF	<fs af='bal,v,,,5,,e,e' head=bale>
+9.1	bale	VM	<fs af='bal,v,,,5,,e,e' name=bale>
+9.2	.	SYM	<fs af='.,punc,,,,,,' name=. poslcat="NM">
+	))		
+</Sentence>

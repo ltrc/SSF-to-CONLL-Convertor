@@ -1,0 +1,102 @@
+
+                'API for SSF'
+                '-----------'
+
+'REPRESENTATION'
+'--------------'
+
+'Index   Num     F1      F2      F3      F4'
+'-----   ---     --      --      --      --'
+(0)     11      0       ((      SSF
+(1)     3       1       ((      NP      f1
+(2)     1       1.1     Ram     NNP     f1.1
+(3)                     ))
+(4)     6       2       ((      VGADV   f2
+(5)     4       2.1     ((      VG      f2.1
+(6)     1       2.1.1   is      VBZ     f2.1.1
+(7)     1       2.1.2   playing VBG     f2.1.2
+(8)                     ))
+(9)                     ))
+(10)                    ))
+
+'The above Data-structure (array) would be stored in @_TREE_'
+
+
+#% Reads the file into the data-structure @_TREE_
+#% &read ([$filename]) --> -nil-
+ 
+#% Prints the data-structure
+#% &print_tree( [$tree] )	-nil-
+
+#% &print_node($node,[$tree])	-nil-
+ 
+#% Gets the children nodes
+#% &get_children( $node , [$tree] )  -> @children_nodes;
+#% To get children of root, $node = 0;
+
+#% Gets the Leaf nodes
+#% &get_leaves( [$tree] )  -> @leaf_nodes;
+
+#% Gets the Leaf nodes
+#% &get_leaves_child($node, [$tree] )  -> @leaf_nodes of that node;
+
+#% Get the nodes which have a particular field-value.
+#% &get_nodes( $fieldnumber , $value , [$tree] ) -> @required_nodes
+
+#% Get the nodes which have a particular field-value.
+#% &get_nodes_pattern( $fieldnumber , $value , [$tree] ) -> @required_nodes
+
+#% Deletes a node
+#% &delete_node( $node , [$tree] )
+
+#% Create a parent for a sequence of nodes 
+#% &create_parent( $node_start , $node_end , $tag , [$tree] );
+
+#% Delete the parent but keep the children
+#% &delete_layer ( $node , [$tree] )
+
+#% Creates a new tree
+#% &create_tree;  -> $empty_tree;
+#% Only SSF as the parent will be there.
+
+#% &add_tree($tree, $sibling_tree, $direction(0/1), [$tree])   -> -nil-
+
+#% &add_node ( $tree , $sibling_node , $direction (0/1) ,[$tree]) -> $index_node
+
+#% Get's all the fields of a given leaf/node
+#% &get_fields ( $node , [$tree] ) -> ($zeroth,$first,$second,$third,$fourth)
+
+#% Get a particular field of a leaf/node
+#% &get_field ( $node , $fieldnumber , [$tree] ) -> $value_of_field
+
+#% Modify a particular field of a leaf/node
+#% &modify_field( $node , $fieldnumber , $value , [$tree] )
+
+#% Copy a node as another tree
+#% &copy ( $node ) -> $tree
+#% If entire tree has to be copied, $node = 0
+
+#% Move a node to a particular place
+#% &move_node( $node , $node2 , $direction , [$tree] )
+#% $direction = 0 if before the sibiling, 1 if after ths sibling
+
+#% Copy the entire tree
+#% copy_tree ( [$tree] ) -> $tree2
+
+#% Gets the parent of a node
+#% &get_parent( $node , [$tree] ) -> $parent_node
+
+#% Gets the next sibling
+#% &get_next_node( $node , [$tree] ) -> $next_node
+
+#% Gets the previous sibling
+#% &get_previous_node( $node , [$tree] ) -> $previous_node
+
+#% Adds a leaf before/after a node
+#% &add_leaf( $node , $direction[0/1] , $f2 , $f3, $f4)
+
+#% Changes Old Shakti representation to New Shakti Representation
+#% &change_old_new($Tree)  -> -nil-
+ 
+#% Changes the new Shakti Representation to the Old Shakti Representation
+#% &change_new_old($Tree) -> -nil-

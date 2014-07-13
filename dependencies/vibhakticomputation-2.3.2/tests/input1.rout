@@ -1,0 +1,9 @@
+1	((	NP	<fs af='rAma,n,,,,,0_ke_dvArA,' head="rAma" vpos="vib1_2_RP_4">
+1.1	rAma	NN	<fs af='rAma,n,,,,,,' name="rAma'>
+1.2	hI	RP	<fs af='hI,avy,,,,,,'>
+	))		
+2	((	NP	<fs af='rAma,n,,,,,0_ke_dvArA,' head="rAma" vpos="vib1_RP_3_RP_5">
+2.1	rAma	NN	<fs af='rAma,n,,,,,,' name="rAma'>
+2.2	jI	RP	<fs af='jI,n,,,,,,'>
+2.3	hI	RP	<fs af='hI,avy,,,,,,'>
+	))		

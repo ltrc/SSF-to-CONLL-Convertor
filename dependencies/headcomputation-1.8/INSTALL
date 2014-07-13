@@ -1,0 +1,20 @@
+Basic Installation
+==================
+
+  1. Create a new directory with some name (eg. mkdir new_dir)
+
+  2. Update ~/.bash_profile with a new enviornment variable called 'setu'
+     (export setu="PATH OF NEW_DIR")
+
+  3. source ~/.bash_profile
+
+  4. Type `make' to copy the package source to $setu/src/sl/headcomputation-1.8
+
+  5. `cd' to the sytem wide directory $setu/src/sl/headcomputation-1.8
+
+  6. Type `make install' to install the programs, data files and
+     documentation in the sampark system wide directory.
+
+  7. You can remove the program binaries and object files from the
+     source code directory by typing `make clean'.  
+

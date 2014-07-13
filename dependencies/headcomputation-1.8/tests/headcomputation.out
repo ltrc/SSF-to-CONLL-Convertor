@@ -1,0 +1,19 @@
+<Sentence id="1">
+1	((	NP	<fs af='saMskqwi,n,f,sg,,o,,' head=saMskqwi>
+1.1	BArawIya	JJ	<fs af='BArawIya,n,m,sg,,o,,' name=BArawIya>
+1.2	saMskqwi	NN	<fs af='saMskqwi,n,f,sg,,o,,' name=saMskqwi>
+1.3	meM	PSP	<fs af='meM,pn,,,,,,' name=meM>
+	))		
+2	((	NP	<fs af='parva,n,m,pl,,d,,' head=parvoM>
+2.1	parvoM	NN	<fs af='parva,n,m,pl,,d,,' name=parvoM>
+2.2	kA	PSP	<fs af='kA,n,m,sg,,o,7,' name=kA>
+	))		
+3	((	NP	<fs af='sWAna,n,m,sg,,o,,' head=sWAna>
+3.1	viSeRa	JJ	<fs af='viSeRa,n,m,sg,,o,,' name=viSeRa>
+3.2	sWAna	NN	<fs af='sWAna,n,m,sg,,o,,' name=sWAna>
+	))		
+4	((	VGF	<fs af='hE,v,any,sg,2,,,hE' head=hE>
+4.1	hE	VAUX	<fs af='hE,v,any,sg,2,,,hE' name=hE>
+4.2	.	SYM	<fs af='&sdot;,punc,,,,,,' name=.>
+	))		
+</Sentence>

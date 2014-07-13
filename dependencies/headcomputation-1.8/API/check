@@ -1,0 +1,239 @@
+9a10
+> 
+12,14d12
+< #$SSF_API = $ENV{'SSF_API'};
+< 
+< #require "$SSF_API/feature_filter.pl";
+49,50d46
+< 		# All if loop can be change to if else and some 
+< 		#variables(like visible,flags etc) are used
+129a126
+> #print STDERR "End TB $pnum\n";
+175,179c172,174
+< 			# Litha Changes
+< 			# Orignal Statement
+< 		#	open(OUT, ">tmp/sentSSF.$$") or die("could not open to write\n");
+< 			my @sent = "";
+< 			my $j = 0;
+---
+> 			print STDERR "$pnum-$sentnum-$cur_sent_id\n";
+> 
+> 			open(OUT, ">tmp/sentSSF.$$") or die("could not open to write\n");
+183,185c178
+< 			# Litha Changes
+< 			# Orignal Statement
+< 			#close(OUT);
+---
+> 			close(OUT);
+188,191c181
+< 			# Litha Changes
+< 			# Orignal Statement
+< 			#$tRee = &read("tmp/sentSSF.$$");
+< 			$tRee = &read(\@sent);
+---
+> 			$tRee = &read("tmp/sentSSF.$$");
+193a184
+>                        # $sentf = 0;
+198a190,191
+> 		#	$pf = 0;
+>                 #        $sentnum = 0;
+216,220c209
+< 			       # Litha Changes
+<                                # Orignal Statement
+<                                # open(OUT, ">tmp/sentSSF.$$") or die("could not open to write\n");
+<                                my @sent = "";
+<                                my $j = 0;
+---
+> 			       open(OUT, ">tmp/sentSSF.$$") or die("could not open to write\n");
+225,228c214
+< 			# Litha Changes
+<                         # Orignal Statement
+< 			# print OUT "$all_lines[$i]\n";
+< 			@sent[$j++]= "$all_lines[$i]\n";
+---
+> 			print OUT "$all_lines[$i]\n";
+236,238c222
+< 		# Litha Changes
+<                 # Orignal Statement
+< 		# close(OUT);
+---
+> 		close(OUT);
+241,244c225
+< 		# Litha Changes
+<                 # Orignal Statement
+<                 # $tRee = &read("tmp/sentSSF.$$");
+<                 $tRee = &read(\@sent);
+---
+>                 $tRee = &read("tmp/sentSSF.$$");
+304,305c285,286
+< 			print "\ntb_num is available.But user is not providing the tb_num: $tb_no\n";
+< 			print "sentence_id: $sent_id is present in the tb_num: $tb_no \n";
+---
+> 			print "\ntb is available.But user is not providing the tb_no:\n";
+> 			print "\ntb_ num: $tb_no\tSentence_id: $sent_id"."\n\n";
+308,309c289,300
+< 		print "\ntb_ num: $tb_no\tSentence_id: $sent_id"."\n\n";
+< 
+---
+> 		if($tb_no == $pnum)
+> 		{
+> 			print "\ntb_ num: $tb_no\tSentence_id: $sent_id"."\n\n";
+> 		}
+> 		else{
+> 			if($pnum)
+> 			{
+> 				print "\ntb_num is available, tb_num= $pnum";
+> 				print "but user is not providing tb_num";
+> 				print "\nSentence_id: $sent_id"."\n\n";
+> 			}
+> 		}
+315c306
+< 		if(!$paraf)
+---
+> 		if(($paraf) && ($pnum == 0))
+317c308
+< 			print "\nError : tb_num is not available.But user is providing the tb_num:\n\n";
+---
+> 			print "\nError : tb is available.But user is not providing the tb_no:\n";
+319c310
+< 		elsif(($paraf) && ($pnum == 0))
+---
+> 		elsif($paraf && $sentf)
+321,322c312
+< 			print "\nError : tb_num is available.But user is not providing the tb_num.\n";
+< 			print "Sentence_id: $sent_id is not present in the all tb_nums: \n\n"
+---
+> 			print "Sentence_id is not present in the tb_no : $pnum\n\n";
+326c316
+< 			print "\nSentence_id: $sent_id is not present in the tb_num : $pnum\n\n";
+---
+> 			print "\nError : tb is not available.But user is providing the tb_no:\n\n";
+453,454c443,444
+< 	
+< 	# Litha Changes up to end of this function	
+---
+> 
+> 	# Litha Changes	
+474a465
+> 			# Sriram Changes
+489a481,482
+> 					#print "<Sentence id=\"$sentcount\">\n";
+> 					#print "<Sentence id=\"".join('==',@{$para->[0]->{'sent_Ids'}})."\">\n";
+526,527c519,520
+< 	# Litha Changes upto end of the program
+<         print OUT "$StoryRef->[0]->{\"first_line\"}$StoryRef->[0]->{\"second_line\"}$StoryRef->[0]->{\"third_line\"}$StoryRef->[0]->{\"meta\"}";
+---
+> 
+>         print OUT "$StoryRef->[0]->{\"first_line\"}\n\n$StoryRef->[0]->{\"second_line\"}\n\n$StoryRef->[0]->{\"third_line\"}\n\n$StoryRef->[0]->{\"meta\"}\n";
+532,538c525,533
+<                 my $paras = $StoryRef->[$i];
+< 		if($paras->[0]->{'body_visible'} == 1)
+<                 {
+<                 	print OUT "<body>\n\n";
+< 		}
+< 		my $paracount = &get_paracount($paras);
+< 		for(my $j = 1; $j <= $paracount; $j++)
+---
+>                 print OUT "<body>\n\n";
+>                 my $para = $StoryRef->[$i];
+> 
+> 		# INformation is there in  $StoryRef->[1]->[$paranum]->[0]->
+> 		my $segment = $para->[0]->{'segment'};
+> 		my $bullet =  $para->[0]->{'bullet'};
+> 		my $lang =  $para->[0]->{'language'};
+> 
+>                 for(my $j = 1; $j <= $para->[0]->{'numSens'}; $j++)
+540,552c535,543
+<                         my $para = $paras->[$j];
+< 			my $segment = $para->[0]->{'segment'};
+< 			my $bullet =  $para->[0]->{'bullet'};
+< 			my $lang =  $para->[0]->{'language'};
+< 			if($para->[0]->{'para_visible'} == 1)
+<                         {
+< 				print OUT "<tb number=\"$j\" segment=\"$segment\" bullet=\"$bullet\">\n";
+< 			}
+< 			if($para->[0]->{'text_visible'} == 1)
+<                         {
+< 				print OUT "<text>\n";
+< 			}
+< 			for(my $k = 1; $k <= $para->[0]->{'numSens'}; $k++)
+---
+>                         my $sentences = $para->[$j];
+>         #                print OUT "<p>\n";
+> 					
+> 			print OUT "<tb number=\"$j\" segment=\"$segment\" bullet=\"$bullet\">\n";
+> 			#print OUT "<tb number=\"$j\" segment=\"yes\" bullet=\"yes\">\n";
+> 			print OUT "<text>\n";
+>                         #print OUT "<tb>\n";
+> 
+>                         for(my $k = 1; $k <= $sentences->[0]; $k++)
+555,560c546,548
+<                                 if($para->[0]->{'sent_visible'} == 1)
+<                                 {
+< 					 print OUT "<Sentence id=\"".$para->[0]->{'sent_Ids'}->[$k]."\">\n";
+< 					close(OUT);
+< 				}
+<                                 &print_tree_file(">>$outfile", $para->[$k]);
+---
+>                                 print OUT "<Sentence id=\"$sentcount\">\n";
+> 				close(OUT);
+>                                 &print_tree_file(">>$outfile", $sentences->[$k]);
+562,565c550
+< 				if($para->[0]->{'sent_visible'} == 1)
+<                                 {
+<                                 	print OUT "</Sentence>\n";
+< 				}
+---
+>                                 print OUT "</Sentence>\n";
+567,575c552,554
+< 			if($para->[0]->{'text_visible'} == 1)
+<                         {
+< 				print OUT "</text>\n";
+< 				print OUT "<foreign language=\"select\" writingsystem=\"LTR\"></foreign>\n";
+< 			}
+< 			if($para->[0]->{'para_visible'} == 1)
+<                         {
+<                         	print OUT "</tb>\n";
+< 			}
+---
+> 			print OUT "</text>\n";
+> 			print "<foreign language=\"select\" writingsystem=\"LTR\"></foreign>\n";
+>                         print OUT "</tb>\n";
+577,580d555
+< 		if($paras->[0]->{'body_visible'} == 1)
+<                 {
+<         		print OUT "</body>\n";
+< 		}
+582c557,560
+< 	print OUT "$StoryRef->[0]->{\"last_line\"}";
+---
+> 
+>         print OUT "</body>\n";
+>         print OUT "</document>\n";
+> 
+630,639c608,614
+< 	# Litha Changes
+< 	# Orignal Statement
+< 	# my $filename;
+< 	# $filename=$_[0];
+< 	# if($filename)
+< 	# {
+< 	#	open(stdin,$filename) or die $!."\n";
+< 	# }
+< 	my $sent_ref;
+< 	$sent_ref=shift;
+---
+> 	my $filename;
+> 
+> 	$filename=$_[0];
+> 	if($filename)
+> 	{
+> 		open(stdin,$filename) or die $!."\n";
+> 	}
+650,653c625
+< 	# Litha Changes
+<         # Orignal Statement
+< 	#while(<stdin>)
+< 	foreach (@$sent_ref)
+---
+> 	while(<stdin>)

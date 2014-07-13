@@ -1,0 +1,17 @@
+1	((	VGF	<fs af='Cipa,v,m,sg,any,,wA,wA' head="CipawA">
+1.1	nahIM	NEG	<fs af='nahIM,adv,,,,,,' poslcat="NM">
+1.2	CipawA	VM	<fs af='Cipa,v,m,sg,any,,wA,wA' name="CipawA">
+1.3	hE	VAUX	<fs af='hE,v,any,sg,2,,hE,hE' name="hE">
+	))
+1	((	VGF	<fs af='Cipa,v,m,sg,any,,wA,wA' head="CipawA">
+1.1	CipawA	VM	<fs af='Cipa,v,m,sg,any,,wA,wA' name="CipawA">
+1.2	nahIM	NEG	<fs af='nahIM,adv,,,,,,' poslcat="NM">
+1.3	hE	VAUX	<fs af='hE,v,any,sg,2,,hE,hE' name="hE">
+	))
+1	((	NP	<fs af='rAma,n,m,sg,,,,' head="rAma">
+1.1	rAma	NN	<fs af='rAma,n,m,sg,,,,' name="rAma">
+1.2	jI	RP	<fs af='jI,adv,,,,,,'>
+1.3	ke	PSP	<fs af='ke,psp,,,,,,'>
+1.4	sAWa	NST	<fs af='sAWa,adv,,,,,,'>
+1.5	BI	RP	<fs af='BI,adv,,,,,,'>
+	))

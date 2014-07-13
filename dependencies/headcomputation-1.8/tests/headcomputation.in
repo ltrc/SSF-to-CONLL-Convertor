@@ -1,0 +1,19 @@
+<Sentence id="1">
+1	((	NP	
+1.1	BArawIya	JJ	<fs af='BArawIya,n,m,sg,,o,,'>
+1.2	saMskqwi	NN	<fs af='saMskqwi,n,f,sg,,o,,'>
+1.3	meM	PSP	<fs af='meM,pn,,,,,,'>
+	))		
+2	((	NP	
+2.1	parvoM	NN	<fs af='parva,n,m,pl,,d,,'>
+2.2	kA	PSP	<fs af='kA,n,m,sg,,o,7,'>
+	))		
+3	((	NP	
+3.1	viSeRa	JJ	<fs af='viSeRa,n,m,sg,,o,,'>
+3.2	sWAna	NN	<fs af='sWAna,n,m,sg,,o,,'>
+	))		
+4	((	VGF	
+4.1	hE	VAUX	<fs af='hE,v,any,sg,2,,,hE'>
+4.2	.	SYM	<fs af='&sdot;,punc,,,,,,'>
+	))		
+</Sentence>

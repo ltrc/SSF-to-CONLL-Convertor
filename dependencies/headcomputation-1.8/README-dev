@@ -1,0 +1,58 @@
+						HEAD COMPUTATION 1.8 (HEAD COMPUTATION)
+						---------------------------------------
+HEAD COMPUTATION : 
+------------------
+Head computation is the task of computing the heads of noun and verb 
+groups and more importantly they provide sufficient information for 
+further processing of the sentence according to the Paninian Theory.
+
+Requirements:
+------------
+Operating System		:    LINUX/UNIX system
+
+Compiler/Interpreter/Librarie(s):    Perl and SSF API's
+
+For installation on Linux, please refer to the file INSTALL.
+
+
+Directory Structure:
+--------------------
+
+headcomputation
+     |
+     |---src (functional source code of the headcomputation)
+     |
+     |---API (SSF API's)
+     |
+     |---tests (contains the referenece input and output)
+     |
+     |---doc (documentaion files of the headcomputation)
+     |
+     |---README (How to run/use the module)
+     |
+     |---INSTALL (How to install in sampark directory structure)
+     |
+     |---ChangeLog (version inforamation)
+     |
+     |---Makefile (first level make file for copying the module source in sampark system)
+     |
+     |---Makefile.stage2 (2nd level make file for actual installation/copying in the bin and data_bin directory)
+     |
+     |---headcomputation_run.sh (to run the headcomputation module)
+     |
+     |---headcomputation.sh (for the use of dashboard spec file)
+     |
+     |---headcomputation.spec (individual headcomputation module run with dashboard)
+     |
+     |---headcomputation.pl (main file of headcomputation)
+
+#################################
+
+Author: Avinesh PVS
+	LTRC
+	IIIT Hyderabad	
+Any Quries or suggestions mail to
+avinesh@students.iiit.ac.in avinesh.pvs@gmail.com 
+
+#################################
+

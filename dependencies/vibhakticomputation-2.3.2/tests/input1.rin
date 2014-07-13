@@ -1,0 +1,13 @@
+1	((	NP	<fs af='rAma,n,,,,,,' head="rAma">
+1.1	rAma	NN	<fs af='rAma,n,,,,,,' name="rAma'>
+1.2	ke	PSP	<fs af='ke,psp,,,,,,'>
+1.3	hI	RP	<fs af='hI,avy,,,,,,'>
+1.4	dvArA	PSP	<fs af='dvArA,psp,,,,,,'>
+	))
+1	((	NP	<fs af='rAma,n,,,,,,' head="rAma">
+1.1	rAma	NN	<fs af='rAma,n,,,,,,' name="rAma'>
+1.2	jI	RP	<fs af='jI,n,,,,,,'>
+1.2	ke	PSP	<fs af='ke,psp,,,,,,'>
+1.3	hI	RP	<fs af='hI,avy,,,,,,'>
+1.4	dvArA	PSP	<fs af='dvArA,psp,,,,,,'>
+	))

@@ -1,0 +1,31 @@
+<Sentence id="1">
+1	((	VGF	
+1.1	xAzdZiyZe	VM	<fs af='xAzdZA,v,,,any,,iyZe,iyZe'>
+	))		
+2	((	NP	
+2.1	Weke	PSP	<fs af='Weke,psp,,,,,,'>
+	))		
+3	((	JJP	
+3.1	abAka	JJ	<fs af='abAka,adj,,,,,,'>
+	))		
+4	((	VGF	
+4.1	hayZe	VM	<fs af='ha,v,,,any,,e,e'>
+	))		
+5	((	VGF	
+5.1	xeKawe	VM	<fs af='xeK,v,,,7,,A,A'>
+5.2	WAki	VAUX	<fs af='WAk,v,,,1,,e,e'>
+	))		
+6	((	NP	
+6.1	xi	XC	<fs af='xi,unk,,,,,,' poslcat="NM">
+	))		
+7	((	NP	
+7.1	greta	NN	<fs af='greta,unk,,,,,,' poslcat="NM">
+	))		
+8	((	NP	
+8.1	himAlayZAna	NN	<fs af='himAlayZAna,adj,,,,,,' poslcat="NM">
+8.2	reFja	NNP	<fs af='reFja,n,,sg,,d,0,0'>
+	))		
+9	((	VGF	
+9.1	.	SYM	<fs af='.,punc,,,,,,' poslcat="NM">
+	))		
+</Sentence>

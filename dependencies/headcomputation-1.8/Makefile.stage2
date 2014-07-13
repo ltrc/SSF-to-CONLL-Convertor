@@ -1,0 +1,32 @@
+#
+# Makefile -- compiling/copying/install/uninstall the module
+#
+
+PREFIX = $(setu)
+
+# Program and Data files and directories.
+DEST_BIN_PROG_DIR = $(PREFIX)/bin/sl/headcomputation
+CPFR = cp -fr
+
+# make all -- make programs, library, documentation, etc.
+all:
+
+install:install-src
+
+install-src:
+	mkdir -p $(DEST_BIN_PROG_DIR)
+	$(CPFR) src tests README-dev README-usr INSTALL headcomputation.pl doc API ChangeLog $(DEST_BIN_PROG_DIR)
+	$(CPFR) headcomputation_run.sh headcomputation.sh headcomputation.spec $(DEST_BIN_PROG_DIR)
+
+# make compile -- Compiles the source code  
+# compile: compile-exec
+
+# make install -- Install what all needs to be installed, copying the files from the packages tree to systemwide directories.# it installs the engine and the corpus, dictionary, etc.
+
+
+# remove the module files from sampark
+clean:uninstall
+uninstall:
+	rm -fr $(DEST_BIN_PROG_DIR) 
+
+.PHONY: all clean install uninstall install-src 

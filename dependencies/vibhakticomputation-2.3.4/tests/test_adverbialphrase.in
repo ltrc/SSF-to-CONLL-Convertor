@@ -1,0 +1,15 @@
+<Sentence id="1">
+1	((	NP	<fs af='rAma,n,m,sg,3,d,0,0' head="rAma">
+1.1	rAma	NNP	<fs af='rAma,n,m,sg,3,d,0,0' name="rAma">
+	))		
+2	((	RBP	<fs af='hameSA,adv,,,,,,' head="hameSA">
+2.1	hameSA	RB	<fs af='hameSA,adv,,,,,,' name="hameSA">
+2.2	se	PSP	<fs af='se,psp,,,,,,'>
+2.3	hI	RP	<fs af='hI,adv,,,,,,' poslcat="NM">
+	))		
+3	((	VGF	<fs af='kara,v,m,sg,any,,wA,wA' head="karawA">
+3.1	karawA	VM	<fs af='kara,v,m,sg,any,,wA,wA' name="karawA">
+3.2	AyA	VAUX	<fs af='A,v,m,sg,any,,yA,yA'>
+3.3	hE	VAUX	<fs af='hE,v,any,sg,2,,hE,hE'>
+	))		
+</Sentence>

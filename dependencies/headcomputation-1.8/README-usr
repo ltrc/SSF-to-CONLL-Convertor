@@ -1,0 +1,35 @@
+						HEAD COMPUTATION 1.8 (HEAD COMPUTATION)
+						---------------------------------------
+HEAD COMPUTATION : 
+------------------
+Head computation is the task of computing the heads of noun and verb 
+groups and more importantly they provide sufficient information for 
+further processing of the sentence according to the Paninian Theory.
+
+
+How to Use??
+------------
+
+1. perl $setu/bin/sl/headcomputation/headcomputation.pl --path=$setu/bin/sl/headcomputation --input=$setu/bin/sl/headcomputation/tests/headcomputation.rin
+
+   *sample input and output files are provided in the tests dir namely headcomputation.rin headcomputation.rout
+
+2. perl $setu/bin/sl/headcomputation/headcomputation.pl --help
+   for display the help
+
+To INSTALL
+-----------
+
+To Install please check INSTALL file.
+
+
+#################################
+
+Author: Avinesh PVS
+	LTRC
+	IIIT Hyderabad	
+Any Quries or suggestions mail to
+avinesh@students.iiit.ac.in avinesh.pvs@gmail.com 
+
+#################################
+

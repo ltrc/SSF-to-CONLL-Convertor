@@ -1,0 +1,38 @@
+<Sentence id="2">
+1	((	VGF	<fs af='mAna,v,m,sg,2,,yA_jA+wA_hE,yA' head="mAnA" vpos="tam1_2_3">
+1.1	mAnA	VM	<fs af='mAna,v,m,sg,any,,yA,yA' name="mAnA">
+	))		
+2	((	CCP	<fs af='ki,avy,,,,,,' head="ki">
+2.1	ki	CC	<fs af='ki,avy,,,,,,' name="ki">
+	))		
+3	((	NP	<fs af='bAxa,adv,,,,,0_kA_bAxa,' head="bAxa" poslcat="NM" vpos="2_vib3_3">
+3.1	amqwamaMWana	NN	<fs af='amqwamaMWana,n,m,sg,,d,,'>
+	))		
+4	((	NP	<fs af='amqwa,n,m,sg,,d,0_kA,' head="amqwa" vpos="vib1_2">
+4.1	amqwa	NN	<fs af='amqwa,n,m,sg,,d,,' name="amqwa">
+	))		
+5	((	NP	<fs af='bUzxa,n,f,pl,,d,,' head="bUzxeM">
+5.1	kuCa	QF	<fs af='kuCa,adv,,,,,,' poslcat="NM">
+5.2	bUzxeM	NN	<fs af='bUzxa,n,f,pl,,d,,' name="bUzxeM">
+	))		
+6	((	NP	<fs af='yahAz,adv,,,,,,' poslcat="NM" head="yahAz">
+6.1	yahAz	PRP	<fs af='yahAz,adv,,,,,,' poslcat="NM" name="yahAz">
+	))		
+7	((	VGF	<fs af='gira,v,f,pl,any,,yA_WA,yA' head="girI" vpos="tam1_2">
+7.1	girI	VM	<fs af='gira,v,f,sg,any,,yA,yA' name="girI">
+7.2	,	SYM	<fs af=',,punc,,,,,'>
+	))		
+8	((	CCP	<fs af='isaliye,avy,,,,,,' head="isalie">
+8.1	isalie	CC	<fs af='isaliye,avy,,,,,,' name="isalie">
+	))		
+9	((	NP	<fs af='yaha,pn,any,sg,3,o,,' head="ise">
+9.1	ise	PRP	<fs af='yaha,pn,any,sg,3,o,,' name="ise">
+	))		
+10	((	NP	<fs af='brahmakuMda,n,m,sg,,d,,' head="brahmakuMda">
+10.1	brahmakuMda	NNP	<fs af='brahmakuMda,n,m,sg,,d,,' name="brahmakuMda">
+	))		
+11	((	VGF	<fs af='kaha,v,m,sg,2,,yA_jA+wA_hE,yA' head="kahA" vpos="tam1_2_3">
+11.1	kahA	VM	<fs af='kaha,v,m,sg,any,,yA,yA' name="kahA">
+11.2	.	SYM	<fs af='.,punc,,,,,,' poslcat="NM">
+	))		
+</Sentence>

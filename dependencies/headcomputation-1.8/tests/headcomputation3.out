@@ -1,0 +1,33 @@
+<Sentence id="1">
+1	((	NP	<fs af='bil,n,,sg,,d,0,0' head=bil>
+1.1	bil	NN	<fs af='bil,n,,sg,,d,0,0' name=bil>
+	))		
+2	((	NP	<fs af='awanu,pn,m,sg,3,,nu,nu' head=awanini>
+2.1	awanini	PRP	<fs af='awanu,pn,m,sg,3,,nu,nu' name=awanini>
+2.2	<1+2>/5>	SYM	<fs af='&frasl;,punc,,,,,,' name=<1+2>/5>>
+	))		
+3	((	NP	<fs af='wAnu,pn,,sg,,,ni,nu' head=wanani>
+3.1	wanani	PRP	<fs af='wAnu,pn,,sg,,,ni,nu' name=wanani>
+	))		
+4	((	VGF	<fs af='xveRiMcu,v,m,sg,3,,wA,wA' head=xveRiswAdu>
+4.1	xveRiswAdu	VM	<fs af='xveRiMcu,v,m,sg,3,,wA,wA' name=xveRiswAdu>
+4.2	<1+2>/5/	SYM	<fs af='&frasl;,punc,,,,,,' name=<1+2>/5/>
+4.3	.	SYM	<fs af='&dot;,punc,,,,,,' name=.>
+	))		
+</Sentence>
+<Sentence id="1">
+1	((	NP	<fs af='bil,n,,sg,,d,0,0' head=bil>
+1.1	bil	NN	<fs af='bil,n,,sg,,d,0,0' name=bil>
+	))		
+2	((	NP	<fs af='awanu,pn,m,sg,3,,nu,nu' head=awanini>
+2.1	awanini	PRP	<fs af='awanu,pn,m,sg,3,,nu,nu' name=awanini>
+2.2	/	SYM	<fs af='&frasl;,punc,,,,,,' name=/>
+	))		
+3	((	NP	<fs af='wAnu,pn,,sg,,,ni,nu' head=wanani>
+3.1	wanani	PRP	<fs af='wAnu,pn,,sg,,,ni,nu' name=wanani>
+	))		
+4	((	VGF	<fs af='xveRiMcu,v,m,sg,3,,wA,wA' head=xveRiswAdu>
+4.1	xveRiswAdu	VM	<fs af='xveRiMcu,v,m,sg,3,,wA,wA' name=xveRiswAdu>
+4.2	.	SYM	<fs af='&dot;,punc,,,,,,' name=.>
+	))		
+</Sentence>

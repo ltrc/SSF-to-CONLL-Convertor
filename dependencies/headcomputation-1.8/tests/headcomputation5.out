@@ -1,0 +1,31 @@
+<Sentence id="1">
+1	((	VGF	<fs af='xAzdZA,v,,,any,,iyZe,iyZe' head=xAzdZiyZe>
+1.1	xAzdZiyZe	VM	<fs af='xAzdZA,v,,,any,,iyZe,iyZe' name=xAzdZiyZe>
+	))		
+2	((	NP	<fs af='Weke,psp,,,,,,' head=Weke>
+2.1	Weke	PSP	<fs af='Weke,psp,,,,,,' name=Weke>
+	))		
+3	((	JJP	<fs af='abAka,adj,,,,,,' head=abAka>
+3.1	abAka	JJ	<fs af='abAka,adj,,,,,,' name=abAka>
+	))		
+4	((	VGF	<fs af='ha,v,,,any,,e,e' head=hayZe>
+4.1	hayZe	VM	<fs af='ha,v,,,any,,e,e' name=hayZe>
+	))		
+5	((	VGF	<fs af='xeK,v,,,7,,A,A' head=xeKawe>
+5.1	xeKawe	VM	<fs af='xeK,v,,,7,,A,A' name=xeKawe>
+5.2	WAki	VAUX	<fs af='WAk,v,,,1,,e,e' name=WAki>
+	))		
+6	((	NP	<fs af='xi,unk,,,,,,' poslcat="NM" head=xi>
+6.1	xi	XC	<fs af='xi,unk,,,,,,' name=xi poslcat="NM">
+	))		
+7	((	NP	<fs af='greta,unk,,,,,,' poslcat="NM" head=greta>
+7.1	greta	NN	<fs af='greta,unk,,,,,,' name=greta poslcat="NM">
+	))		
+8	((	NP	<fs af='reFja,n,,sg,,d,0,0' head=reFja>
+8.1	himAlayZAna	NN	<fs af='himAlayZAna,adj,,,,,,' name=himAlayZAna poslcat="NM">
+8.2	reFja	NNP	<fs af='reFja,n,,sg,,d,0,0' name=reFja>
+	))		
+9	((	VGF	<fs af='.,punc,,,,,,' poslcat="NM" head=.>
+9.1	.	SYM	<fs af='.,punc,,,,,,' name=. poslcat="NM">
+	))		
+</Sentence>

@@ -1,0 +1,170 @@
+'Shakti Standard Format of Feature Structure':
+	E.g.: <af=ram,n,m,s,3,0,,>|<af=ram,v,m,s,3,0,,/attr1=val1/attr2=val2/attr3=<attr4=val4|<attr5=val5>>>
+
+'Representaion of the Structure':
+	A Feature structure is represented by a hash.
+	All the attributes in the feature structure make the keys of the hash.
+	The value of the key is a reference to a OR node (i.e. an array).
+	Each field of the OR node (array) contains either reference to a hash (i.e. another feature structure)
+	or a value.
+	
+	User when he calls read_FS($string) he gets the reference to an or node (i.e. a collection of feature structures).
+
+OR node which can have one/more feature structures
+        <af=,,,,/a1=v1/a2=v2>|<af=,,,,/b1=w1/b2=w2>
+
+$ORNode is reference to an array
+$ORNode =>  --  --
+       | V1 |
+       | V2 |           Vn = { Reference to Feature Structure (Ref to a hash) (or) string }
+       | .. |
+       | Vn |
+       --  --
+
+$FS is a reference to a hash
+$FS =>
+
+        --           --
+        | attr1  val1 |
+        | attr2  val2 |         valn = { $ORNode }
+        |     ...     |
+        | attrn  valn |
+        --           --
+
+
+
+#% read_FS($string)  --> reference to an OR node (array).
+	 $string is the feature structure (to be loaded) in the new shakti standard format.
+	 reference to an OR node (array) is returned.
+
+#% read_FS_old($string)  --> reference to an OR node (array).
+	 $string is the feature structure in the old shakti standard format.
+	 reference to an OR node (array) is returned. 
+ 
+#% get_values($featurePath,$FSreference)	--> An OR node (array) containg the values of that attribute.
+	 $FSreference is the reference to an OR node (array) of the feature structure.
+	 An OR node is returned containing all possible values for that specified feature path. 
+
+#% get_values_2($featurePath,$FSreference)	--> An array containg the matched values.
+	 $FSreference is the reference to a single feature structure.
+	 An OR node is returned containing all possible values for that specified feature path.
+
+#% get_attributes($FSReference)		-> array containing the attributes for that feature structure
+	 $FSReference is the reference to a single feature structure (i.e. reference to a hash ).
+	 array containing the attributes for that feature structure is returned. 
+
+#% get_path_values($attr,$fs)	--> 2D array of values and paths.
+	 $fs is the reference to an OR node (array) with one or more Feature Structure present in it.
+	 A 2D array of values and paths is returned.
+	 field 0 of that array contains the path.
+	 field 1 of that array contains the corresponding value. <Changes made to the value here will not be reflected>.
+
+#% get_path_values_2($attr,$fs)	--> 2D array of values and paths.
+	 $fs is the reference to a single feature structure. (i.e. reference to a hash)
+	 a 2D array of values and pathss is returned
+	 field 0 of that array contains the path.
+	 field 1 of that array contains the corresponding value. <Changes made to the value here will not be reflected>.
+
+#% copyFS($fs) --> Reference of a new FS
+	 $fs is the reference to a single feature structure
+	 A reference to a new copied feature structure is returned.
+
+#% add_attr_val($featurePath,$value,$FSReference)	--> -nil-
+	 $FSReference is the reference to an OR node (array).
+	 $value is a reference to an OR node (array) which will be the value of the attribute mentioned by $featurePath.
+	 Nothing is returned.
+
+#% add_attr_val_2($featurePath,$value,$FSReference)	--> -nil-
+	 $FSReference is the reference to a single feature structure (i.e reference to a hash).
+	 $value and $featurePath have the same meaning as specified above.
+
+#% update_attr_val($featurePath,$val,$FSReference)	--> -nil-
+	 $FSReference is the reference to an OR Node (array)
+	 The value specified by the featurepath willll be changed to the new val ($val)
+	 $val is the reference to another OR node (array).
+
+#% update_attr_val_2($featurePath,$val,$FSReference)	--> -nil-
+	 $FSReference is the reference to a single feature structure (Reference to a hash).
+	 The value specified by the featurepath willll be changed to the new val ($val)
+	 $val is the reference to another OR node (array).
+
+#% del_attr_val($featurePath,$FSReference)
+	 $FSReference is the reference to an OR node (array).
+	 Deletes the value of the attribute specified by $featurePath.
+
+#% del_attr_val_2($featurePath,$FSReference)
+	 $FSReference is the reference to a single feature structure (i.e. reference to a hash).
+	 Deletes the value of the attribute specified by $featurePath.
+
+#% unify($fs1,$fs2)	--> $fs3;
+	 $fs1 and $fs2 are references to two OR nodes containing one or more feature structures,
+	 $fs3 is either -1 or a reference to a new OR node of feature structures.
+	 -1 is returned in the case that the featurestructures cannot be unified.
+	 Though provision has been provided for passing OR nodes as the arguments, 
+	 each OR node passed in the argument should
+	 refer to only one feature structure.
+
+#% unify_2($fs1,$fs2)	--> $fs3;
+	 $fs1 and $fs2 are references to two feature structures (i.e. reference to hashes),
+	 $fs3 is either -1 or a reference to a new OR node of feature structures.
+	 -1 is returned in the case that the featurestructures cannot be unified.
+
+#% merge($fs1,$fs2)	-->	-nil-
+	 $fs1 and $fs2 are references to OR nodes containing multiple possible feature structures.
+	 Changes the values of $fs1 to those of $fs2 for all the common attributes of fs1 and fs2
+	 Rest of the values of $fs1 are left untouched.
+
+#% merge_2($fs1,$fs2)	-->	-nil-
+	 $fs1 and $fs2 are references to single feature structures.
+	 Changes the values of $fs1 to those of $fs2 for all the common attributes of fs1 and fs2
+	 Rest of the values of $fs1 are left untouched.
+
+#% load_hash()	--> Reference to a hash
+	 Loads the string passed into a hash 
+	 Reference to that hash is returned.
+
+#% printFS_SSF($fs)	--> -nil-
+	 $fs is a reference to an OR node containing one or more feature structures.
+	 prints the structure in the standard format. 
+
+#% printFS_SSF_2($fs)	--> -nil-
+	 $fs is a reference to a single feature structure (i.e. reference to a hash)
+	 prints the structure in the standard format. 
+
+#% make_string($FSReference)	--> 	-$string-
+	 $FSReference is the reference to an OR node.
+	 $string is the feature structure in the standard format.
+
+#% make_string_2($FSReference)	--> 	-$string-
+	 $FSReference is the reference to a single feature structure (i.e reference to a hash).
+	 $string is the feature structure in the standard format.
+
+#% prune_FS($featurePath,$fieldNumber,$FSReference)	--> +1/-1
+	 $FSReference is the reference to an OR node.
+	 Deletes the feature structure or value from the OR node (array) , which is the value of the attribute specified by
+	 $featurePath.
+	 +1 indicates successful completion of the function
+	 -1 indicates that such a feature path does not exist.
+
+#% prune_FS_2($featurePath,$fieldNumber,$FSReference)	--> +1/-1
+	 $FSReference is the reference to a single feature structure.
+	 Deletes the feature structure or value from the OR node (array) , which is the value of the attribute specified by
+	 $featurePath.
+	 +1 indicates successful completion of the function
+	 -1 indicates that such a feature path does not exist.
+
+#% get_fs_reference($ref_to_array,$index_feature_structure)
+	 $ref_to_array is the reference to an OR node (array).
+	 $index_... is the field you want from that array.
+
+#% get_num_fs($ref_to_array)  --> number of feature structures in that reference passed (Or values also)
+	 $ref_to+array is the reference to an OR node (array).
+ 
+#% printFS_SSF_old($fs)	--> -nil-
+	 $fs is a reference to an OR node.
+	 prints the feature structure in the old shakti format.
+
+#% make_string_old($fs)	--> -$string-
+	 $fs is a reference to an OR node.
+	 makes the feature structure in the old shakti format.
+	 And that string is returned.

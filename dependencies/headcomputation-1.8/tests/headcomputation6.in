@@ -1,0 +1,32 @@
+<Sentence id="1">
+1	((	VGNN	
+1.1	PerAra	VM	<fs af='PerAra,adj,,,,,,' poslcat="NM">
+	))		
+2	((	NP	
+2.1	paWe	NN	<fs af='paWa,n,,sg,,d,e,e'>
+	))		
+3	((	NP	
+3.1	sikimera	NN	<fs af='sikima,n,,sg,,o,era,era'>
+3.2	sarbeAcca	NST	<fs af='sarbeAcca,unk,,,,,,' poslcat="NM">
+	))		
+4	((	NP	
+4.1	leka	XC	<fs af='leka,n,,sg,,d,0,0' poslcat="NM">
+	))		
+5	((	NP	
+5.1	gurudambAra	NN	<fs af='gurudambA,n,,sg,,o,era,era'>
+	))		
+6	((	NP	
+6.1	yAke	PRP	<fs af='ye,pn,,sg,,d,ke,ke'>
+	))		
+7	((	NP	
+7.1	aneke	PRP	<fs af='aneke,unk,,,,,,' poslcat="NM">
+	))		
+8	((	NP	
+8.1	uiSiM	NNP	<fs af='uiSiM,unk,,,,,,' poslcat="NM">
+8.2	lekao	NN	<fs af='leka,n,,sg,,d,0,0'>
+	))		
+9	((	VGF	
+9.1	bale	VM	<fs af='bal,v,,,5,,e,e'>
+9.2	.	SYM	<fs af='.,punc,,,,,,' poslcat="NM">
+	))		
+</Sentence>

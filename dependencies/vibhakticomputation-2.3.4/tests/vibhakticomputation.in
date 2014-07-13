@@ -1,0 +1,49 @@
+<Sentence id="1">
+1	((	NP	<fs af='niyaMwraNa,,m,s,,0,0,' head="niyaMwraNa">
+1.1	niyaMwraNa	NN	<fs af='niyaMwraNa,,m,s,,0,0,' name="niyaMwraNa">
+1.2	,	SYM	
+	))		
+2	((	NP	<fs af='aMkuraNa,,m,s,,1,,' head="aMkuraNa">
+2.1	aMkuraNa	NN	<fs af='aMkuraNa,,m,s,,1,,' name="aMkuraNa">
+2.2	ke	PSP	<af='kA,,m,s,,1,,'>
+2.3	kAraNa	PSP	<af='kAraNa,,m,s,,0,,'>
+	))		
+3	((	NP	<fs af='samaya,,m,s,,0,0,' head="samaya">
+3.1	samaya	NN	<fs af='samaya,,m,s,,0,0,' name="samaya">
+	))	
+4	((	VGF	<fs af='ho,,m,p,any,1,,nA' head="hone">
+4.1	hone	VNN	<fs af='ho,,m,p,any,1,,nA' name="hone">
+	))
+5	((	VGF	<fs af='ho,,m,p,any,1,nA,nA' head="hone">
+5.1	hone	VNN	<fs af='ho,,m,p,any,1,nA,nA' name="hone">
+5.2	vAlI	PSP	<fs af='vAlI,,f,s,,0,,'>
+	))	
+6	((	VGNN	<fs af='ho,,m,p,any,1,nA,nA' head="hone">
+6.1	hone	VNN	<fs af='ho,,m,p,any,1,nA,nA' name="hone">
+6.2	vAlI	PSP	<fs af='vAlI,,f,s,,0,,'>
+	))	
+7	((	VGNF	<fs af='ho,,m,p,any,1,nA,nA' head="hone">
+7.1	hone	VNN	<fs af='ho,,m,p,any,1,nA,nA' name="hone">
+7.2	vAlI	PSP	<fs af='vAlI,,f,s,,0,,'>
+	))		
+8	((	NP	<fs af='hAni,,f,s,,1,,' head="hAni">
+8.1	hAni	NN	<fs af='hAni,,f,s,,1,,' name="hAni">
+8.2	ko	PSP	<fs af='ko,,,,,,,'>
+	))		
+9	((	NP	<fs af='bIjopacAra,,,,,1,,' head="bIjopacAra">
+9.1	uciwa	JJ	<fs af='uciwa,,any,any,,any,,'>
+9.2	bIjopacAra	NN	<fs af='bIjopacAra,,,,,1,,' name="bIjopacAra">
+9.3	xvArA	PSP	<fs af=xvArA,,,,,,,'>
+	))		
+10	((	VGF	<fs af='roka,,m,s,any,,yA,' head="roka">
+10.1	rokA	VFM	<fs af='roka,,m,s,any,,yA,' name="roka">
+10.2	jA	VAUX	<fs af='jA,,any,any,any,,0,'>
+10.3	sakawa	VAUX	<fs af='saka,,f,s,any,,wA,'>
+10.4	hE	VAUX	<fs af='hE,,any,s,m,,hE,'>
+10.5	.	SYM	
+	))	
+11	((	VGF	<fs af='roka,,m,s,any,,yA,' head="roka">
+11.1	rokA	VFM	<fs af='roka,,m,s,any,,yA,' name="roka">
+12.2	.	SYM	
+	))
+</Sentence>	
