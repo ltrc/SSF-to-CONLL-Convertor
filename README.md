@@ -5,7 +5,7 @@ Input Data can either be a file or a folder.
 
 The data should be in ssf formatt::
 
-1	((	NP	\\\\<fs name='NP' drel='rel:head'>
+1	((	NP	\\\<fs name='NP' drel='rel:head'>
 
 1.1	the	DET	<fs af='the,det,,,,,,,' name='the'>
 
