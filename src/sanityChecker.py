@@ -46,23 +46,3 @@ class SanityChecker (SSFReader) :
 						self.ifCycle_(node_)
 					except Exception,e:
 						return "#cycle in "+node_+"\t"+self.modifierModified[node_]
-
-
-'''
-if __name__ == "__main__":
-
-	import re
-	import sys
-
-	inputFile = open(sys.argv[1]).read()
-	
-	sentences = re.findall("<Sentence id=.*?>(.*?)</Sentence>",inputFile, re.S)
-
-	for idx,sentence in enumerate(sentences):
-		try:
-			obj=SanityChecker(sentence.strip())
-			check_ = "\t".join(obj.treeSanity())
-		except:pass
-		
-		if check_:print check_
-'''
