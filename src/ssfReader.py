@@ -84,19 +84,3 @@ class SSFReader (object):
 			lemma_ = lemma_
 		
 		return lemma_,cat_,gen_,num_,per_,case_,vib_,tam_
-
-'''	
-if __name__ == "__main__":
-
-	import re
-	import sys
-
-	inputFile = open(sys.argv[1]).read()
-	
-	sentences = re.findall("<Sentence id=.*?>(.*?)</Sentence>",inputFile, re.S)
-
-	for idx,sentence in enumerate(sentences):
-		obj=SSFReader(sentence.strip()).getAnnotations()
-		print obj.modifierModified
-		sys.exit()
-'''
