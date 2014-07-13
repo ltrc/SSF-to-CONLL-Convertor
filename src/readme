@@ -1,18 +1,17 @@
 
- <python ssf2conll.py --help>
+USAGE :: bash ssf2conll.sh <file/directory> <output file> <log file>
 
 Input Data can either be a file or a folder.
 
-The data should be in ssf formatt with minimium requirements as::
+The data should be in ssf formatt::
 
-1	((	NP	
-1.1	the	DET	
-1.2	boy	NN	
+1	((	NP	<fs name='NP' drel='rel:head'>
+1.1	the	DET	<fs af='the,det,,,,,,,' name='the'>
+1.2	boy	NN	<fs af='boy,n,,,,,,,' name='boy'>
 	))		
 
 Dependencies ::
 
-1. headcomputation-1.7
-2. vibhakticomputation-2.3.2
+1. headcomputation
+2. vibhakticomputation
 
-NOTE :: If you get an error, check the "error.txt" for possible reasons and also make sure that input file is in proper ssf format.
