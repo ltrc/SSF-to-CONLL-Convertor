@@ -1,5 +1,5 @@
 
-USAGE :: bash ssf2conll.sh <file/directory> <output file> <log file>
+USAGE :: bash ssf2conll.sh \\<file/directory <output file log file
 
 Input Data can either be a file or a folder.
 
