@@ -71,12 +71,12 @@ if __name__ == "__main__":
 	
 	args = parser.parse_args()
 
-	if os.path.isfile(args.output):
+	if os.path.isfile(os.path.abspath(args.output)):
 		outputFile = open(args.output,'a')
 	else:
 		outputFile = open(args.output,'w')
 	
-	if os.path.isfile(args.log):
+	if os.path.isfile(os.path.abspath(args.log)):
 		logFile = open(args.log,'a')
 	else:
 		logFile = open(args.log,'w')
