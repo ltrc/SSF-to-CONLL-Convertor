@@ -56,7 +56,7 @@ class SSFReader (object):
 					self.nodeList.append(self.node(wordForm_,posTag_.decode("ascii",'ignore').encode("ascii"),\
 															 self.features(lemma_,cat_,gen_,num_,per_,case_,vib_,tam_),\
 															 chunkType_,depRel_,parent_,stype_,voicetype_))
-					self.modifierModified[chunkType_] = parent_	
+					self.modifierModified[chunkType_] = parent_
 				wordForm_,posTag_,chunkType_,depRel_,parent_,stype_,voicetype_,\
 				lemma_,cat_,gen_,num_,per_,case_,vib_,tam_, = [None]*15
 			
