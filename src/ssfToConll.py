@@ -93,13 +93,13 @@ if __name__ == "__main__":
 			output_ = "\n".join(convertor_object.convert())
 		except:
 			#logFile.write(filePath+" "+sentence_ids[idx]+" #Error :: Wrong ssf formatt!\n")
-			logFile.write("<Sentence id='"+sentence_ids[idx]+"'>"+" #Error :: Wrong ssf formatt!\n")
+			logFile.write("<Sentence id="+sentence_ids[idx]+">"+" #Error :: Wrong ssf formatt!\n")
 		else:
 			if output_.startswith("#Error"):
-				logFile.write("<Sentence id='"+sentence_ids[idx]+"'>"+" "+output_+"\n")
+				logFile.write("<Sentence id="+sentence_ids[idx]+">"+" "+output_+"\n")
 			else:
 				outputFile.write(output_+"\n\n")
-				logFile.write("<Sentence id="+sentence_ids[idx]+"'>"+" converted\n")
+				logFile.write("<Sentence id="+sentence_ids[idx]+">"+" converted\n")
 
 
 logFile.close()

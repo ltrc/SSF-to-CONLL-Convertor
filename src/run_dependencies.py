@@ -4,8 +4,8 @@
 def run_dependencies(inputFile):
 	sentencIds = re.findall('<Sentence id=(.*?)>', inputFile) 
 	ssfSentences = re.findall("<Sentence id=.*?>(.*?)</Sentence>", inputFile,re.S)
-	headPath = "/home/riyaz/Tools/ssf2conllconverter/ssf2conll_convertor/dependencies/headcomputation-1.8/"
-	vibPath = "/home/riyaz/Tools/ssf2conllconverter/ssf2conll_convertor/dependencies/vibhakticomputation-2.3.4/"
+	headPath = "$ssf2conll/headcomputation-1.8/"
+	vibPath = "$ssf2conll/vibhakticomputation-2.3.4/"
 
 	for idx, sentence in enumerate(ssfSentences):
 		sentence = re.sub(r"<fs name='NULL(.*?)'>",r"<fs af='null,unk,,,,,,' name='NULL\1'>",\
