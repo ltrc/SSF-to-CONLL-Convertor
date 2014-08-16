@@ -36,6 +36,7 @@ if __name__ == "__main__":
 		assert sys.argv[1] and sys.argv[2] and sys.argv[3]
 	except Exception, error:
 		print error, "in sys.argv, please specify the required arguments!"
+		sys.exit()
 	else:
 		input_ = sys.argv[1]
 		log_ = open(sys.argv[3],'a')
