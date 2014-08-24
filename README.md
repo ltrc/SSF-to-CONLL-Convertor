@@ -18,4 +18,4 @@ Dependencies ::
 1. headcomputation
 2. vibhakticomputation
 
-Set the environment variable ssf2conll to dependencies folder in ~/.bashrc as export ssf2conll="PATH OF DEPENDENCIES FOLDER"
+Set the environment variable ssf2conll to conll converter folder in ~/.bashrc as export ssf2conll="PATH OF CONLL CONVERTER FOLDER"

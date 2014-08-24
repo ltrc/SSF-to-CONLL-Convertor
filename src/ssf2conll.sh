@@ -18,13 +18,13 @@ if [[ -d $INPUT ]]; then
 		if [[ -f $input ]];then
 			echo -n "" > head_vib.temp
 			echo $input >> $LOGFILE
-			python run_dependencies.py $input head_vib.temp $LOGFILE
-			python ssfToConll.py --input-file head_vib.temp --output-file $OUTPUT --log-file $LOGFILE
+			python $ssf2conll/src/run_dependencies.py $input head_vib.temp $LOGFILE
+			python $ssf2conll/src/ssfToConll.py --input-file head_vib.temp --output-file $OUTPUT --log-file $LOGFILE
 		fi
 	done
 else
-	python run_dependencies.py $INPUT head_vib.temp $LOGFILE
-	python ssfToConll.py --input-file head_vib.temp --output-file $OUTPUT --log-file $LOGFILE
+	python $ssf2conll/src/run_dependencies.py $INPUT head_vib.temp $LOGFILE
+	python $ssf2conll/src/ssfToConll.py --input-file head_vib.temp --output-file $OUTPUT --log-file $LOGFILE
 fi
 
 if [[ -f head_vib.temp ]];then
