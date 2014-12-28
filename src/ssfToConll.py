@@ -25,7 +25,7 @@ class ConllConvertor (SanityChecker):
 		"""
 
 	def convert (self):
-		""" 															--- Conll Formatt	---
+		"""																      --- Conll Formatt	---
 		1	kAmU	kAmU	n	NNP	lex-kAmU|cat-n|gen-m|num-sg|pers-3|case-d|vib-0|tam-0|chunkId-NP|stype-|voicetype-	2	spr	_	_
 		"""
 		if self.check_:
@@ -51,9 +51,9 @@ class ConllConvertor (SanityChecker):
 					cat_ = node.lemmaFeatures.cat
 
 				features = "lex-%s|cat-%s|gen-%s|num-%s|pers-%s|case-%s|vib-%s|tam-%s|chunkId-%s|stype-%s|voicetype-%s" \
-										% (node.wordForm,node.lemmaFeatures.cat,node.lemmaFeatures.gen,\
-										node.lemmaFeatures.num,node.lemmaFeatures.per,node.lemmaFeatures.case,\
-										node.lemmaFeatures.vib,node.lemmaFeatures.tam,node.chunkType,node.stype,node.voicetype)
+					    % (node.wordForm,node.lemmaFeatures.cat,node.lemmaFeatures.gen,\
+					    node.lemmaFeatures.num,node.lemmaFeatures.per,node.lemmaFeatures.case,\
+					    node.lemmaFeatures.vib,node.lemmaFeatures.tam,node.chunkType,node.stype,node.voicetype)
 				features_ = re.sub("None",'',features)
 				yield "\t".join((str(idx+1),node.wordForm,lemma_,cat_,node.posTag,features_,head_,relation_.lower(),"_","_"))
 

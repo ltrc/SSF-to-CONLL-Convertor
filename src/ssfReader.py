@@ -26,7 +26,7 @@ class SSFReader (object):
 
 		for line in self.sentence.split("\n"):
 			if line.split("\t")[0].isdigit():
-				assert len(line.split("\t")) is 4 # no need to process trash!
+				assert len(line.split("\t")) is 4 # no need to process trash! FIXME
 				keyValue_pairs = self.FSPairs(line.split("\t")[3][4:-1])
 				for key,value in keyValue_pairs.items():
 					if key == "af":
@@ -38,9 +38,9 @@ class SSFReader (object):
 					elif key == "head":
 						wordForm_ = value
 					elif key == "drel":
-						assert len(value.split(":")) is 2 # no need to process trash!
+						assert len(value.split(":")) is 2 # no need to process trash! FIXME
 						depRel_, parent_ = re.sub("'|\"",'',value).split(":")
-						assert depRel_ and parent_ != "" # no need to process trash!
+						assert depRel_ and parent_ != "" # no need to process trash! FIXME
 					elif key == "stype":
 						stype_ = re.sub("'|\"",'',value)
 					elif key == "voicetype":
@@ -50,12 +50,12 @@ class SSFReader (object):
 			elif line.split("\t")[0].replace(".",'',1).isdigit():
 					if re.search(re.escape(wordForm_), line):
 						wordForm_,posTag_ = line.split("\t")[1:3]
-						assert wordForm_.strip() and posTag_.strip() != '' # no need to process trash!
+						assert wordForm_.strip() and posTag_.strip() != '' # no need to process trash! FIXME
 			else:
 				if wordForm_ is not None: ## Ignore nodes whose head is not computed!
 					self.nodeList.append(self.node(wordForm_,posTag_.decode("ascii",'ignore').encode("ascii"),\
-															 self.features(lemma_,cat_,gen_,num_,per_,case_,vib_,tam_),\
-															 chunkType_,depRel_,parent_,stype_,voicetype_))
+					self.features(lemma_,cat_,gen_,num_,per_,case_,vib_,tam_),\
+					chunkType_,depRel_,parent_,stype_,voicetype_))
 					self.modifierModified[chunkType_] = parent_
 				wordForm_,posTag_,chunkType_,depRel_,parent_,stype_,voicetype_,\
 				lemma_,cat_,gen_,num_,per_,case_,vib_,tam_, = [None]*15
@@ -74,7 +74,7 @@ class SSFReader (object):
 
 	def morphFeatures (self, AF):
 		"LEMMA,CAT,GEN,NUM,PER,CASE,VIB,TAM"
-		assert len(AF[:-1].split(",")) is 8 # no need to process trash!
+		assert len(AF[:-1].split(",")) is 8 # no need to process trash! FIXME
 		lemma_,cat_,gen_,num_,per_,case_,vib_,tam_ = AF.split(",")
 
 		if len(lemma_.decode("utf-8")) > 1:

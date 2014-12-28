@@ -1,6 +1,5 @@
 #!/usr/bin/env python -*- coding:utf-8 -*-
 
-
 def run_dependencies(inputFile):
 	sentencIds = re.findall('<Sentence id=(.*?)>', inputFile) 
 	ssfSentences = re.findall("<Sentence id=.*?>(.*?)</Sentence>", inputFile,re.S)
@@ -9,7 +8,7 @@ def run_dependencies(inputFile):
 
 	for idx, sentence in enumerate(ssfSentences):
 		sentence = re.sub(r"<fs name='NULL(.*?)'>",r"<fs af='null,unk,,,,,,' name='NULL\1'>",\
-								 '<Sentence id="'+str(sentencIds[idx])[1:-1]+'">\n'+sentence.strip()+"\n</Sentence>\n") # add af='' to null nodes.
+			   '<Sentence id="'+str(sentencIds[idx])[1:-1]+'">\n'+sentence.strip()+"\n</Sentence>\n") # add af='' to null nodes.
 		temp = tempfile.NamedTemporaryFile()
 		try:
 			temp.write(sentence)
