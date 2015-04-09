@@ -1,4 +1,4 @@
-[Shakti Standard Format (SSF)](http://ltrc.iiit.ac.in/nlptools2010/files/documents/SSF.pdf) is a representation for storing linguistic analysis of natural languages. Its widely being used for storing treebank annotations of Indian Languages. However, in order to train dependency parsers on treebank annotations, the annotations should be in CONLL format. The SSF-to-CONLL convertor facilitates this conversion.
+[Shakti Standard Format (SSF)](http://ltrc.iiit.ac.in/nlptools2010/files/documents/SSF.pdf) is a representation for storing linguistic analysis of natural languages. Its widely being used for storing treebank annotations of Indian Languages. However, in order to train dependency parsers on treebank annotations, the annotations should be in [CONLL](https://code.google.com/p/clearparser/wiki/DataFormat) format. The SSF-to-CONLL convertor facilitates this conversion.
 
 __How to use?__
 ```
