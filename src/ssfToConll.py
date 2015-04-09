@@ -9,15 +9,14 @@ from sanityChecker import SanityChecker
 
 class ConllConvertor (SanityChecker):
 
-	def __init__(self, sentence):
-		super(ConllConvertor, self).__init__(sentence)
+	def __init__(self, sentence, annotation):
+		super(ConllConvertor, self).__init__(sentence, annotation)
 		self.check_ = self.treeSanity()
-		
 		""" Super Class Methods and Attributes
 		self.modifierModified = dict()
     self.nodeList = list()
     self.node = namedtuple('node',
-    ('wordForm', 'posTag', 'lemmaFeatures', 'chunkType', 'depRel', 'parent', 'stype','voicetype'))
+    ('wordForm', 'posTag', 'lemmaFeatures', 'headType', 'chunkId', 'projection', 'depRel', 'parent', 'stype','voicetype'))
     self.features = namedtuple('features',
     ('lemma','cat','gen','num','per','case','vib','tam'))
 		getAnnotations()
@@ -26,18 +25,19 @@ class ConllConvertor (SanityChecker):
 
 	def convert (self):
 		"""																      --- Conll Formatt	---
-		1	kAmU	kAmU	n	NNP	lex-kAmU|cat-n|gen-m|num-sg|pers-3|case-d|vib-0|tam-0|chunkId-NP|stype-|voicetype-	2	spr	_	_
+		1	kAmU	kAmU	n	NNP	
+		lex-kAmU|cat-n|gen-m|num-sg|pers-3|case-d|vib-0|tam-0|chunkId-NP|stype-|voicetype-	2	spr	_	_
 		"""
 		if self.check_:
 			yield "#Error :: "+self.check_
 		else:
 			for idx, node in enumerate(self.nodeList):
-
 				if node.parent is None and node.depRel is None:
 					head_ = "0"
 					relation_ = "main"
 				else:
-					head_ = [str(idy+1) for idy, nodey in enumerate(self.nodeList) if nodey.chunkType == node.parent][0]
+					head_ = [str(idy+1) for idy, nodey in enumerate(self.nodeList) \
+							if nodey.headType == node.parent][0]
 					relation_ = node.depRel
 
 				if node.lemmaFeatures.lemma is None:
@@ -50,12 +50,18 @@ class ConllConvertor (SanityChecker):
 				else:
 					cat_ = node.lemmaFeatures.cat
 
-				features = "lex-%s|cat-%s|gen-%s|num-%s|pers-%s|case-%s|vib-%s|tam-%s|chunkId-%s|stype-%s|voicetype-%s" \
-					    % (node.wordForm,node.lemmaFeatures.cat,node.lemmaFeatures.gen,\
-					    node.lemmaFeatures.num,node.lemmaFeatures.per,node.lemmaFeatures.case,\
-					    node.lemmaFeatures.vib,node.lemmaFeatures.tam,node.chunkType,node.stype,node.voicetype)
+				if self.annotation == "inter":
+					chunkInfo = node.chunkId
+				else:
+					chunkInfo = node.chunkId+"|chunkType-"+node.projection
+				features = \
+					"cat-%s|gen-%s|num-%s|pers-%s|case-%s|vib-%s|tam-%s|chunkId-%s|stype-%s|voicetype-%s"\
+					% (node.lemmaFeatures.cat,node.lemmaFeatures.gen,\
+					node.lemmaFeatures.num,node.lemmaFeatures.per,node.lemmaFeatures.case,\
+					node.lemmaFeatures.vib,node.lemmaFeatures.tam,chunkInfo,node.stype,node.voicetype)
 				features_ = re.sub("None",'',features)
-				yield "\t".join((str(idx+1),node.wordForm,lemma_,cat_,node.posTag,features_,head_,relation_.lower(),"_","_"))
+				yield "\t".join((str(idx+1),node.wordForm,lemma_,cat_,node.posTag,features_,
+							head_,relation_.lower(),"_","_"))
 
 if __name__ == "__main__":
 
@@ -65,11 +71,18 @@ if __name__ == "__main__":
 	import argparse
 	
 	parser = argparse.ArgumentParser(description="SSF to CONLL Convertor!")
-	parser.add_argument('--input-file' , dest='input', required=True  , help='Input file in ssf format')
-	parser.add_argument('--output-file' , dest='output', required=True  , help='Output conll file')
-	parser.add_argument('--log-file' , dest='log', required=True  , help='will contain processing details')
+	parser.add_argument('--input-file'     , dest='input'     , required=True, help='Input file in ssf format')
+	parser.add_argument('--output-file'    , dest='output'    , required=True, help='Output conll file')
+	parser.add_argument('--log-file'       , dest='log'       , required=True, help='will contain processing details')
+	parser.add_argument('--annotation-type', dest='annotation', required=True, help='annotation type either `inter` or `intra`')
 	
 	args = parser.parse_args()
+
+	try:
+		assert args.annotation in ["intra", "inter"]
+	except:
+		print "Specify annotation style as either `intra` or `inter`."
+		sys.exit()
 
 	if os.path.isfile(os.path.abspath(args.output)):
 		outputFile = open(args.output,'a')
@@ -89,9 +102,9 @@ if __name__ == "__main__":
 	filePath = os.path.abspath(args.input)
 	for idx,sentence in enumerate(sentences):
 		try:
-			convertor_object = ConllConvertor(sentence.strip())
+			convertor_object = ConllConvertor(sentence.strip(), args.annotation)
 			output_ = "\n".join(convertor_object.convert())
-		except:
+		except Exception, error:
 			#logFile.write(filePath+" "+sentence_ids[idx]+" #Error :: Wrong ssf formatt!\n")
 			logFile.write("<Sentence id="+sentence_ids[idx]+">"+" #Error :: Wrong ssf formatt!\n")
 		else:
@@ -100,7 +113,6 @@ if __name__ == "__main__":
 			else:
 				outputFile.write(output_+"\n\n")
 				logFile.write("<Sentence id="+sentence_ids[idx]+">"+" converted\n")
-
 
 logFile.close()
 outputFile.close()

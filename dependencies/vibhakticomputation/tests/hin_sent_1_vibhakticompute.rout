@@ -1,5 +1,5 @@
 <Sentence id="1">
-1	((	NP	<fs af='harixvAra,n,m,sg,,d,0_meM,' head="harixvAra" vpos="vib1_2">
+1	((	NP	<fs af='harixvAra,n,m,sg,,d,0_meM,' head="harixvAra" vpos="vib_2">
 1.1	harixvAra	NNP	<fs af='harixvAra,n,m,sg,,d,,' name="harixvAra">
 	))		
 2	((	NP	<fs af='mAz,n,f,sg,,d,,' head="mAz">
@@ -8,7 +8,7 @@
 3	((	NP	<fs af='gaMgA,n,f,sg,,d,,' head="gaMgA">
 3.1	gaMgA	NNP	<fs af='gaMgA,n,f,sg,,d,,' name="gaMgA">
 	))		
-4	((	NP	<fs af='sirA,n,m,pl,,d,0_se,' head="sire_2" vpos="vib2_3">
+4	((	NP	<fs af='sirA,n,m,pl,,d,0_se,' head="sire_2" vpos="vib_3">
 4.1	eka	QC	<fs af='eka,adj,any,any,,any,,' poslcat="NM">
 4.2	sire	NN	<fs af='sirA,n,m,pl,,d,,' name="sire_2">
 	))		
@@ -17,7 +17,7 @@
 5.2	sire	NN	<fs af='sirA,n,m,pl,,d,,' name="sire">
 5.3	waka	RP	<fs af='waka,avy,,,,,,'>
 	))		
-6	((	VGF	<fs af='baha,v,f,pl,1,,wA_hE,wA' head="bahawI" vpos="tam1_2">
+6	((	VGF	<fs af='baha,v,f,pl,1,,wA_hE,wA' head="bahawI" vpos="tam_2">
 6.1	bahawI	VM	<fs af='baha,v,f,sg,any,,wA,wA' name="bahawI">
 6.2	,	SYM	<fs af=',,punc,,,,,'>
 	))		
@@ -28,7 +28,7 @@
 8.1	jo	DEM	<fs af='jo,pn,any,sg,3,d,,'>
 8.2	puNya	NN	<fs af='puNya,n,m,sg,,d,,' name="puNya">
 8.3	))		
-9	((	NP	<fs af='pOdZI,unk,,,,,0_meM,' head="pOdZI" poslcat="NM" vpos="vib3_4">
+9	((	NP	<fs af='pOdZI,unk,,,,,0_meM,' head="pOdZI" poslcat="NM" vpos="vib_4">
 9.1	hara	XC	<fs af='hara,adv,,,,,,'>
 9.2	kI	XC	<fs af='kA,psp,f,sg,,d,,'>
 9.3	pOdZI	NNP	<fs af='pOdZI,unk,,,,,,' poslcat="NM" name="pOdZI">
@@ -39,14 +39,14 @@
 11	((	NP	<fs af='‘,punc,,,,,,' poslcat="NM" head="‘">
 11.1	‘	SYM	<fs af='‘,punc,,,,,,' poslcat="NM" name="‘">
 	))		
-12	((	NP	<fs af='brahmakuMda,n,m,sg,,d,0_meM,' head="brahmakuMda" vpos="vib1_3">
+12	((	NP	<fs af='brahmakuMda,n,m,sg,,d,0_meM,' head="brahmakuMda" vpos="vib_3">
 12.1	brahmakuMda	NNP	<fs af='brahmakuMda,n,m,sg,,d,,' name="brahmakuMda">
 12.2	’	SYM	<fs af='’,punc,,,,,,' poslcat="NM">
 	))		
-13	((	NP	<fs af='snAna,n,m,sg,,d,0_se,' head="snAna" vpos="vib1_2">
+13	((	NP	<fs af='snAna,n,m,sg,,d,0_se,' head="snAna" vpos="vib_2">
 13.1	snAna	NN	<fs af='snAna,n,m,sg,,d,,' name="snAna">
 	))		
-14	((	VGF	<fs af='mila,v,m,sg,2,,wA_hE,wA' head="milawA_2" vpos="tam1_2">
+14	((	VGF	<fs af='mila,v,m,sg,2,,wA_hE,wA' head="milawA_2" vpos="tam_2">
 14.1	milawA	VM	<fs af='mila,v,m,sg,any,,wA,wA' name="milawA_2">
 14.2	,	SYM	<fs af=',,punc,,,,,,'>
 	))		

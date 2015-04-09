@@ -4,7 +4,7 @@ def run_dependencies(inputFile):
 	sentencIds = re.findall('<Sentence id=(.*?)>', inputFile) 
 	ssfSentences = re.findall("<Sentence id=.*?>(.*?)</Sentence>", inputFile,re.S)
 	headPath = "$ssf2conll/dependencies/headcomputation-1.8/"
-	vibPath = "$ssf2conll/dependencies/vibhakticomputation-2.3.4/"
+	vibPath = "$ssf2conll/dependencies/vibhakticomputation/"
 
 	for idx, sentence in enumerate(ssfSentences):
 		sentence = re.sub(r"<fs name='NULL(.*?)'>",r"<fs af='null,unk,,,,,,' name='NULL\1'>",\
@@ -14,7 +14,7 @@ def run_dependencies(inputFile):
 			temp.write(sentence)
 			temp.seek(0)
 			head=commands.getstatusoutput("ulimit -t 20;sh "+" "+ headPath+"headcomputation_run.sh "+" " + temp.name+" > head.txt")
-			vib=commands.getstatusoutput("ulimit -t 20;sh "+" "+ vibPath+"vibhakticomputation_run.sh head.txt >> " + output_)
+			vib=commands.getstatusoutput("ulimit -t 20;sh "+" "+ vibPath+"vibhakticomputation_run.sh head.txt " + " >> " + output_)
 		finally:
 			temp.close()
 
@@ -38,8 +38,8 @@ if __name__ == "__main__":
 		sys.exit()
 	else:
 		input_ = sys.argv[1]
-		log_ = open(sys.argv[3],'a')
 		output_ = sys.argv[2]
+		log_ = open(sys.argv[3],'a')
 		if os.path.isfile(os.path.abspath(input_)):
 			run_dependencies(open(input_).read())
 		else:

@@ -1,0 +1,11 @@
+1	((	VGF	<fs af='Cipa,v,m,sg,2,,nahIM_wA_hE,wA' head="CipawA" vpos="NEG1_tam_3">
+1.1	CipawA	VM	<fs af='Cipa,v,m,sg,any,,wA,wA' name="CipawA">
+	))		
+2	((	VGF	<fs af='Cipa,v,m,sg,2,,wA_nahIM_hE,wA' head="CipawA" vpos="tam_NEG2_3">
+2.1	CipawA	VM	<fs af='Cipa,v,m,sg,any,,wA,wA' name="CipawA">
+	))		
+3	((	NP	<fs af='rAma,n,m,sg,,,0_ke_sAWa,' head="rAma" vpos="vib_RP_3_4_RP">
+3.1	rAma	NN	<fs af='rAma,n,m,sg,,,,' name="rAma">
+3.2	jI	RP	<fs af='jI,adv,,,,,,'>
+3.3	BI	RP	<fs af='BI,adv,,,,,,'>
+	))		

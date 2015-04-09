@@ -1,0 +1,69 @@
+						VIBHAKTI COMPUTATION 2.2 (VIBHAKTI COMPUTATION)
+						-----------------------------------------------
+VIBHAKTI COMPUTATION : 
+----------------------
+
+Requirements:
+------------
+Operating System		:    LINUX/UNIX system
+
+Compiler/Interpreter/Librarie(s):    Perl and SSF API's
+
+For installation on Linux, please refer to the file INSTALL.
+
+
+Directory Structure:
+--------------------
+
+vibhakticomputation
+     |
+     |---src (functional source code of the vibhakticomputation)
+     |
+     |---API (SSF API's)
+     |
+     |---tests (contains the referenece input and output)
+     |
+     |---doc (documentaion files of the vibhakticomputation)
+     |---README
+     |
+     |---INSTALL
+     |
+     |---ChangeLog
+     |
+     |---Makefile
+     |
+     |---Makefile.stage2
+     |
+     |---vibhakticomputation_run.sh
+     |
+     |---vibhakticomputation.sh
+     |
+     |---vibhakticomputation.spec
+     |
+     |---vibhakticomputation.pl
+
+
+
+
+How to Use??
+------------
+
+1. perl $setu/bin/sl/vibhakticomputation/vibhakticomputation.pl --path=$setu/bin/sl/vibhakticomputation --input=$setu/bin/sl/vibhakticomputation/tests/vibhakticomputation.rin
+
+   *sample input and output files are provided in the tests dir namely vibhakticomputation.rin vibhakticomputation.rout.
+
+2. perl $setu/bin/sl/vibhakticomputation/vibhakticomputation.pl --help
+   for display the help
+
+
+#################################
+Author: Avinesh PVS
+	LTRC
+	IIIT Hyderabad	
+
+Any Quries or suggestions mail to
+avinesh@students.iiit.ac.in
+(or)
+avinesh.pvs@gmail.com 
+#################################
+

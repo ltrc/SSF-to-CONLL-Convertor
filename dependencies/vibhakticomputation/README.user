@@ -1,0 +1,33 @@
+						VIBHAKTI COMPUTATION 2.3 (VIBHAKTI COMPUTATION)
+						-----------------------------------------------
+VIBHAKTI COMPUTATION : 
+----------------------
+
+How to Use??
+------------
+
+1. perl $setu/bin/sl/vibhakticomputation/vibhakticomputation.pl \
+   --path=$setu/bin/sl/vibhakticomputation
+   --input=$setu/bin/sl/vibhakticomputation/tests/vibhakticomputation.rin
+
+   *sample input and output files are provided in the tests dir namely vibhakticomputation.rin vibhakticomputation.rout.
+
+2. perl $setu/bin/sl/vibhakticomputation/vibhakticomputation.pl --help
+   for display the help
+
+To Install:
+-----------
+
+Please check INSTALL file
+
+##############################################
+Author: Avinesh PVS
+	Language Technologies Research Centre
+	IIIT Hyderabad	
+
+Any Quries or suggestions mail to
+avinesh@students.iiit.ac.in
+(or)
+avinesh.pvs@gmail.com 
+###############################################
+

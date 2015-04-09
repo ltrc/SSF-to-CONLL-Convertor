@@ -1,61 +1,9 @@
-15-01-2013 Ankush Soni <ankush.soni@students.iiit.ac.in>,<ankushj470@gmail.com>
-        * Version 2.3.4
-	
-	1. Issues in case of adverbial phrase has been resolved. Adverbs (head of adverb phrase) is eaten up by vibhatki computation module 2.3.3
-
-16-11-2012 Ankush Soni <ankush.soni@students.iiit.ac.in>,<ankushj470@gmail.com>
-        * Version 2.3.3
-	
-	1. Issues in case of adverbial phrase has been resolved. Previously it was not computing vibhakti in case of adverbial phrase.
-	Now its computing.
-	Ex: See in tests directory, filename - test_adverbialphrase.rin
-
-
-30-07-2009  Avinesh PVS  <avinesh@students.iiit.ac.in>,<avinesh.pvs@gmail.com>
-
-	* Version 2.3.2
-
-	1. Error in NEG calculation
-	   ex: tests/07_aug_vibhakticomputation.rin
-
-
-23-07-2009  Avinesh PVS  <avinesh@students.iiit.ac.in>,<avinesh.pvs@gmail.com>
-
-	* Version 2.3.1
-
-	1. Makefile is updated.
-
-
-22-07-2009  Avinesh PVS  <avinesh@students.iiit.ac.in>,<avinesh.pvs@gmail.com>
-
-	* Version 2.3
-
-	1. vpos error and incase of NP chunks the tam of suffix was left out.	
-
-	Ex: tests/error.2.3.rin
-
-19-3-2009  Avinesh PVS  <avinesh@students.iiit.ac.in>,<avinesh.pvs@gmail.com>
-
-	* Version 2.2.2
-
-	1. Bug Regarding the NP chunk vibhakti computation. Vibhakti was
-	computed properly but the vpos was calculated wrong.	
-
-	Ex: tests/error.2.2.2.rin
-
-19-3-2009  Avinesh PVS  <avinesh@students.iiit.ac.in>,<avinesh.pvs@gmail.com>
-
-	* Version 2.2.1
-
-	1. Position of the vibhakti is noted down.
-	Ex: Previously vpos="vib_2_RP_4" now vpos="vib1_2_RP_4"
-
 19-3-2009  Avinesh PVS  <avinesh@students.iiit.ac.in>,<avinesh.pvs@gmail.com>
 
 	* Version 2.2
 	
 	1. RP's and PSP's, NEG's and VAUX's position being stored in a
-	variable called vpos. (examples in error.rin)
+variable called vpos. (examples in error.rin)
 
 	Input:
 	1       ((      VGF     <fs af='Cipa,v,m,sg,any,,wA,wA' head="CipawA">
@@ -64,12 +12,12 @@
 	1.3     hE      VAUX    <fs af='hE,v,any,sg,2,,hE,hE' name="hE">
 		))
 	Output:
-	1       ((      VGF     <fs af='Cipa,v,m,sg,2,,nahIM_wA_hE,wA' head="CipawA" vpos="NEG1_tam2_3">
+	1       ((      VGF     <fs af='Cipa,v,m,sg,2,,nahIM_wA_hE,wA' head="CipawA" vpos="NEG1_tam_3">
 	1.1     CipawA  VM      <fs af='Cipa,v,m,sg,any,,wA,wA' name="CipawA">
 		))
 
 	Here vpos represents NEG1_tam_3 -> "NEG1" position of NEG is 1,"tam"
-	is original tam of the head at 2 after addition of NEG,3 represents the position of hE.
+	is original tam of the head,3 represents the position of hE.
 
 	This is given to have the flexibility of the position in the Vibhakti
 	Splitter Module.

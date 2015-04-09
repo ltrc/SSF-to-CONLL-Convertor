@@ -11,7 +11,6 @@ sub ComputeTAM()
 	my @VGNF_nodes = &get_nodes(3,"VGNF",$sent);	#get all the VG nodes
 	my @VGNN_nodes = &get_nodes(3,"VGNN",$sent);	#get all the VG nodes
 	
-	#push VGINF,VGNF,VGNN nodes to uns_VG_nodes. Thus we have single list containing all the VG nodes.
 	foreach (@VGINF_nodes)
 	{
         	push(@uns_VG_nodes,$_);
@@ -26,10 +25,10 @@ sub ComputeTAM()
 	}
 	
 	my @remove;
-	my @VG_nodes = sort {$a <=> $b}(@uns_VG_nodes);	#sorting list in ascending order
+	my @VG_nodes = sort {$a <=> $b}(@uns_VG_nodes);	
 	foreach $node (@VG_nodes)
 	{
-		my @leaves = &get_leaves_child($node,$sent); #gets all the leaves of the the VG node
+		my @leaves = &get_leaves_child($node,$sent);
 		my $parent = $node;
 		my $head = 0;
 		my $final_tam_aux = "";
@@ -40,48 +39,34 @@ sub ComputeTAM()
 		my @final_tam;
 		my @_leaf;
 		my $position="";
-
-		$f4=&get_field($node,4,$sent); #gets fs of the node
-		my $string_fs = &read_FS($f4, $sent);
-		my @head_value = &get_values("head", $string_fs, $sent);#gets head value of the node
-
-		#checks for verb leaf, if present sets verb_leaf_present=1
 		foreach $leaf (@leaves)
 		{
-			$leaf_tag = &get_field($leaf, 3,$sent);#gets postag of leaf
+			$leaf_tag = &get_field($leaf, 3,$sent);
 			if($leaf_tag =~ /^V/)
 			{
 				$verb_leaf_present = 1;
 			}
 		}
-		
- 		
+ 
 		foreach $leaf (@leaves)
 		{
-			$leaf_tag = &get_field($leaf, 3,$sent);#gets postag of leaf
-			$leaf_lex = &get_field($leaf, 2,$sent);#gets lexical item of leaf
+			$leaf_tag = &get_field($leaf, 3,$sent);
+			$leaf_lex = &get_field($leaf, 2,$sent);
 			if($leaf_tag =~/^V/ and $head == 0)	
 			{
 
 				$head = 1;
 				$node_head = $leaf;
-				$fs = &get_field($leaf, 4,$sent);#gets feature structure
+				$fs = &get_field($leaf, 4,$sent);
 				$fs_array = &read_FS($fs,$sent);
 				$fs_array_head = $fs_array;
 				@tam = &get_values("vib", $fs_array,$sent);
-				my @name_value= &get_values("name",$fs_array,$sent); #gets value of name attribute 
-				if($head_value[0] eq $name_value[0])
-				{
-					$num=$leaf-$node; #gives position of the leaf with respect to the nodei
-					
-					# modifies the value of vpos(position) in a chunk
-					
-					if($position ne "")
-					{$position=$position."_"."tam$num";}
-					if($position eq "")
-					{$position="tam$num";}
-				}
-		#storing tam values
+
+				if($position ne "")
+				{$position=$position."_"."tam";}
+				if($position eq "")
+				{$position="tam";}
+
 				if($tam[0] ne "")
 				{
 					if($final_tam_aux ne "")
@@ -92,7 +77,7 @@ sub ComputeTAM()
 					{
 						$final_tam_aux = $tam[0];
 					}
-		#store all the tam of all interpretation in $final_tam
+#store all the tam of all interpretation in $final_tam
 				}
 				else
 				{
@@ -106,10 +91,9 @@ sub ComputeTAM()
 					}
 				}
 			}
-			elsif($leaf_tag=~/^VAUX/ or $leaf_tag=~/PSP/ or $leaf_tag=~/NST/) #identifying whether a vibhakti or not.
+			elsif($leaf_tag=~/^VAUX/ or $leaf_tag=~/PSP/ or $leaf_tag=~/NST/)
 			{
 				$flag=1;
-		          	#modifying the value of vpos(position)
 				if($position ne "")
 				{
 					$num=$leaf-$node;
@@ -122,61 +106,9 @@ sub ComputeTAM()
 				
 
 
-				my $word1=&get_field($leaf,2,$sent); #gets the word(lex)
+				my $word1=&get_field($leaf,2,$sent);
 #print "LEAF TAG--$leaf_tag--$word1\n";
 				push(@remove,$leaf);
-				$fs = &get_field($leaf, 4,$sent);
-				$fs_array = &read_FS($fs,$sent);
-				@tam = &get_values("vib", $fs_array); #gets value of vib attribute 
-				@lex = &get_values("lex", $fs_array); #gets lexical item(root)
-				push(@_leaf,$leaf);
-				my $root = $lex[0];
-				my $tam_t = "";
-				#line 137 to 162 modifies tam feature of fs.
-				
-				if($tam[0] ne "" and $tam[0] ne "`" and $tam[0] ne "0" and $tam[0] ne $root)
-				{
-					$tam_t = $tam[0];
-					if($final_tam_aux ne "")
-					{
-						$final_tam_aux = $final_tam_aux."_".$root."+".$tam_t;
-					}
-					else
-					{
-						$final_tam_aux = $root."+".$tam_t;
-					}
-				}
-				else
-				{
-					$tam_t = "0";
-
-					if($final_tam_aux ne "")
-					{
-						$final_tam_aux = $final_tam_aux."_".$root;
-					}
-					else
-					{
-						$final_tam_aux = $root;
-					}
-				}
-			}
-			elsif($leaf_tag eq 'NEG' and $verb_leaf_present == 1)
-			{
-=cut
-				if($position ne "")
-				{
-					$num=$leaf-$node;
-					$position=$position."_"."NEG$num";
-				}
-				if($position eq "")
-				{
-					$num=$leaf-$node;
-					$position="NEG$num";
-				}
-				$neg = &get_field($leaf, 2,$sent);
-				
-				push(@remove,$leaf);
-				$flag=1;
 				$fs = &get_field($leaf, 4,$sent);
 				$fs_array = &read_FS($fs,$sent);
 				@tam = &get_values("vib", $fs_array);
@@ -199,20 +131,17 @@ sub ComputeTAM()
 				else
 				{
 					$tam_t = "0";
+
 					if($final_tam_aux ne "")
 					{
 						$final_tam_aux = $final_tam_aux."_".$root;
-
 					}
 					else
 					{
 						$final_tam_aux = $root;
 					}
 				}
-=cut
 			}
-
-
 		}
 		
 		$fs_head = &get_field($parent, 4,$sent);
@@ -270,6 +199,7 @@ sub ComputeTAM()
 	}
 	my @sort_remove=sort{$a <=> $b} @remove;
 	my $delete=0;
+=cut
 	foreach (@sort_remove)
 	{	
 		&delete_node($_-$delete,$sent);
@@ -277,9 +207,8 @@ sub ComputeTAM()
 	}
 	delete @remove[0..$#remove];
 	delete @sort_remove[0..$#remove];
-
+=cut
 	#print "after vib comp--\n";
 	#&print_tree();
 }
 1;
-

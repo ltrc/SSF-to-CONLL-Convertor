@@ -15,9 +15,9 @@ Basic Installation
   1. `cd' to the directory containing the package's source code.
 
 
-  2. Type `make' to copy the package source to $setu/src/sl/vibhakticomputation-2.3.4
+  2. Type `make' to copy the package source to $setu/src/sl/vibhakticomputation-2.2
 
-  3. `cd' to the sytem wide directory $setu/src/sl/vibhakticomputation-2.3.4
+  3. `cd' to the sytem wide directory $setu/src/sl/vibhakticomputation-2.2
 
   4. Type `make install' to install the programs, data files and
      documentation in the sampark system wide directory.

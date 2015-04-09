@@ -10,8 +10,8 @@ foreach (@ARGV) {
 
 if($help eq 1)
 {
-	print "Vibhakti Computation  - Vibhakti Computation Version 2.3.2\n(14th July 2007 last modified on 9th August 2009)\n\n";
-	print "usage : ./vibhakticomputation.pl --path=/home/vibhakticomputation-2.3.2 [-i inputfile|--input=\"input_file\"] [-o outputfile|--output=\"output_file\"] \n";
+	print "Vibhakti Computation  - Vibhakti Computation Version 1.3\n(14th July 2007 last modified on 19th Sep 2008)\n\n";
+	print "usage : ./run-vibh.pl --path=/home/vibhakticomputation-1.3 [-i inputfile|--input=\"input_file\"] [-o outputfile|--output=\"output_file\"] \n";
 	print "\tIf the output file is not mentioned then the output will be printed to STDOUT\n";
 	exit(0);
 }

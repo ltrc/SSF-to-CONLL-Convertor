@@ -8,8 +8,8 @@ from ssfReader import SSFReader
 
 class SanityChecker (SSFReader) :
 
-	def __init__(self, sentence):
-		super(SanityChecker, self).__init__(sentence)
+	def __init__(self, sentence, annotation):
+		super(SanityChecker, self).__init__(sentence, annotation)
 		self.getAnnotations()
 
 		""" Super Class Methods and Attributes
@@ -34,7 +34,8 @@ class SanityChecker (SSFReader) :
 		else:
 			if self.modifierModified.values().count(None) is 0:
 				return "#Root-less tree"
-			elif self.modifierModified.values().count(None) > 1 or len([None for i in self.nodeList if i.depRel is None]) > 1:
+			elif self.modifierModified.values().count(None) > 1 or len(\
+					[None for i in self.nodeList if i.depRel is None]) > 1:
 				return "#Forest, mulitple roots"
 			elif len(set(self.modifierModified.values()) - set(self.modifierModified.keys())) > 1:
 				difference = set(self.modifierModified.values()) - set(self.modifierModified.keys())
@@ -61,8 +62,10 @@ if __name__ == "__main__":
 	for idx,sentence in enumerate(sentences):
 		try:
 			obj=SanityChecker(sentence.strip())
-			check_ = "\t".join(obj.treeSanity())
+			check_ = "".join(obj.treeSanity())
+			print check_
+			print sentence
 		except:pass
 		
-		if check_:print check_
+		#if check_:print check_
 '''
