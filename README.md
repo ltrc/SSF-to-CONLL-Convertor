@@ -31,6 +31,14 @@ While Intra-Chunk dependencies should be in the following SSF format:
 4       .       SYM     <fs af='.,punc,,,,,,' drel='rsym:raha' posn='40' name='.' chunkId='BLK' chunkType='head:BLK'>
 </Sentence>
 ```
+Outout of the Sentence 2 in CONLL would look like:
+```
+1       Kusa    Kusa    adj     JJ      cat-adj|gen-any|num-any|pers-|case-|vib-|tam-|chunkId-JJP|chunkType-head|stype-|voicetype-      2       pof     _       _
+2       raha    raha    v       VM      cat-v|gen-any|num-sg|pers-2|case-|vib-0|tam-0|chunkId-VGF|chunkType-head|stype-declarative|voicetype-active     0       main    _       _
+3       XUlIcanxa       XUlIcanxa       n       NNP     cat-n|gen-m|num-sg|pers-3|case-d|vib-0|tam-0|chunkId-NP|chunkType-head|stype-|voicetype-        2       rad     _       _
+4       .       .       punc    SYM     cat-punc|gen-|num-|pers-|case-|vib-|tam-|chunkId-BLK|chunkType-head|stype-|voicetype-   2       rsym    _       _
+
+```
 Following are the dependencies of the convertor:
 ```
 1. headcomputation
