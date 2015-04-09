@@ -4,7 +4,7 @@ __How to use?__
 ```
 bash ssf2conll.sh <input (file|directory)> <output file> <log file> <annotation type (intra|inter)>
 ```
-The data should be in [Shakti Standard Format (SSF)](http://ltrc.iiit.ac.in/nlptools2010/files/documents/SSF.pdf). Inter-Chunk dependecies should be formated as in the following:
+The data should be in SSF. Inter-Chunk dependecies should be formated as in the following:
 ```
 <Sentence id='1'>
 1       ((      NP      <fs name='NP' drel='k1:VGF'>
