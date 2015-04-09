@@ -8,13 +8,16 @@ def run_dependencies(inputFile):
 
 	for idx, sentence in enumerate(ssfSentences):
 		sentence = re.sub(r"<fs name='NULL(.*?)'>",r"<fs af='null,unk,,,,,,' name='NULL\1'>",\
-			   '<Sentence id="'+str(sentencIds[idx])[1:-1]+'">\n'+sentence.strip()+"\n</Sentence>\n") # add af='' to null nodes.
+			   '<Sentence id="'+str(sentencIds[idx])[1:-1]+'">\n'+sentence.strip()+"\n</Sentence>\n") 
+			   # add af='' to null nodes.
 		temp = tempfile.NamedTemporaryFile()
 		try:
 			temp.write(sentence)
 			temp.seek(0)
-			head=commands.getstatusoutput("ulimit -t 20;sh "+" "+ headPath+"headcomputation_run.sh "+" " + temp.name+" > head.txt")
-			vib=commands.getstatusoutput("ulimit -t 20;sh "+" "+ vibPath+"vibhakticomputation_run.sh head.txt " + " >> " + output_)
+			head=commands.getstatusoutput(\
+				"ulimit -t 20;sh "+" "+ headPath+"headcomputation_run.sh "+" " + temp.name+" > head.txt")
+			vib=commands.getstatusoutput(\
+				"ulimit -t 20;sh "+" "+ vibPath+"vibhakticomputation_run.sh head.txt " + " >> " + output_)
 		finally:
 			temp.close()
 
