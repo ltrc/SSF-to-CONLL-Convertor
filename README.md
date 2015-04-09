@@ -1,3 +1,4 @@
+[Shakti Standard Format (SSF)](http://ltrc.iiit.ac.in/nlptools2010/files/documents/SSF.pdf) is a representation for storing linguistic analysis of natural languages. Its widely being used for storing treebank annotations of Indian Languages. However, in order to train dependecy parsers on treeban annotation, the annotations should be in CONLL format. The SSF-to-CONLL convertor facilitates this conversion.
 How to use?
 ```
 bash ssf2conll.sh <input (file|directory)> <output file> <log file> <annotation type (intra|inter)>
@@ -37,7 +38,6 @@ Output of Sentence 2 in CONLL would look like:
 2       raha    raha    v       VM      cat-v|gen-any|num-sg|pers-2|case-|vib-0|tam-0|chunkId-VGF|chunkType-head|stype-declarative|voicetype-active     0       main    _       _
 3       XUlIcanxa       XUlIcanxa       n       NNP     cat-n|gen-m|num-sg|pers-3|case-d|vib-0|tam-0|chunkId-NP|chunkType-head|stype-|voicetype-        2       rad     _       _
 4       .       .       punc    SYM     cat-punc|gen-|num-|pers-|case-|vib-|tam-|chunkId-BLK|chunkType-head|stype-|voicetype-   2       rsym    _       _
-
 ```
 Following are the dependencies of the convertor:
 ```
