@@ -1,8 +1,8 @@
-USAGE:
+How to use?
 ```
 bash ssf2conll.sh <input (file|directory)> <output file> <log file> <annotation type (intra|inter)>
 ```
-The data should be in ssf format. Inter-Chunk dependecies should be formatted as in the following:
+The data should be in [Shakti Standard Format (SSF)](http://ltrc.iiit.ac.in/nlptools2010/files/documents/SSF.pdf). Inter-Chunk dependecies should be formated as in the following:
 ```
 <Sentence id='1'>
 1       ((      NP      <fs name='NP' drel='k1:VGF'>
@@ -31,7 +31,7 @@ While Intra-Chunk dependencies should be in the following SSF format:
 4       .       SYM     <fs af='.,punc,,,,,,' drel='rsym:raha' posn='40' name='.' chunkId='BLK' chunkType='head:BLK'>
 </Sentence>
 ```
-Outout of the Sentence 2 in CONLL would look like:
+Output of Sentence 2 in CONLL would look like:
 ```
 1       Kusa    Kusa    adj     JJ      cat-adj|gen-any|num-any|pers-|case-|vib-|tam-|chunkId-JJP|chunkType-head|stype-|voicetype-      2       pof     _       _
 2       raha    raha    v       VM      cat-v|gen-any|num-sg|pers-2|case-|vib-0|tam-0|chunkId-VGF|chunkType-head|stype-declarative|voicetype-active     0       main    _       _
