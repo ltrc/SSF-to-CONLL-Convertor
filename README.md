@@ -22,9 +22,9 @@ The data should be in [Shakti Standard Format (SSF)](http://ltrc.iiit.ac.in/nlpt
         ))
 </Sentence>
 ```
-While Intra-Chunk dependencies should be in the following SSF format:
+While Intra-Chunk dependencies should in the following format:
 ```
-<Sentence id="2">
+<Sentence id='2'>
 1       Kusa    JJ      <fs af='Kusa,adj,any,any,,,,' drel='pof:raha' posn='10' name='Kusa' chunkId='JJP' chunkType='head:JJP'>
 2       raha    VM      <fs af='raha,v,any,sg,2,,0,0' stype='declarative' posn='20' voicetype='active' name='raha' chunkId='VGF' chunkType='head:VGF'>
 3       XUlIcanxa       NNP     <fs af='XUlIcanxa,n,m,sg,3,d,0,0' drel='rad:raha' posn='30' name='XUlIcanxa' chunkId='NP' chunkType='head:NP'>
