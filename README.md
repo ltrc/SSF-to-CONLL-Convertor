@@ -4,7 +4,7 @@ __How to use?__
 ```
 bash ssf2conll.sh <input (file|directory)> <output file> <log file> <annotation type (intra|inter)>
 ```
-The data should be in SSF. Inter-Chunk dependecies should be formated as in the following:
+The data should be in SSF. Inter-Chunk dependecies should be formated as in the sentence below:
 ```
 <Sentence id='1'>
 1       ((      NP      <fs name='NP' drel='k1:VGF'>
@@ -24,7 +24,7 @@ The data should be in SSF. Inter-Chunk dependecies should be formated as in the 
         ))
 </Sentence>
 ```
-While Intra-Chunk dependencies should in the following format:
+While Intra-Chunk dependencies should be in the expanded SSF format:
 ```
 <Sentence id='2'>
 1       Kusa    JJ      <fs af='Kusa,adj,any,any,,,,' drel='pof:raha' posn='10' name='Kusa' chunkId='JJP' chunkType='head:JJP'>
