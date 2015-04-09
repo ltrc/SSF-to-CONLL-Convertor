@@ -1,9 +1,7 @@
 USAGE:
 ```
-bash ssf2conll.sh file/directory output file log file"
+bash ssf2conll.sh <file|directory> <output file> <log file> <annotation type (intra|inter)>
 ```
-Input Data can either be a file or a folder.
-
 The data should be in ssf format. Inter-Chunk dependecies should be formatted as in the following:
 ```
 <Sentence id='10'>
@@ -24,7 +22,7 @@ The data should be in ssf format. Inter-Chunk dependecies should be formatted as
         ))
 </Sentence>
 ```
-While Intra-chunk dependencies should be in the following SSF format:
+While Intra-Chunk dependencies should be in the following SSF format:
 ```
 <Sentence id="2">
 1       Kusa    JJ      <fs af='Kusa,adj,any,any,,,,' drel='pof:raha' posn='10' name='Kusa' chunkId='JJP' chunkType='head:JJP'>
@@ -33,12 +31,12 @@ While Intra-chunk dependencies should be in the following SSF format:
 4       .       SYM     <fs af='.,punc,,,,,,' drel='rsym:raha' posn='40' name='.' chunkId='BLK' chunkType='head:BLK'>
 </Sentence>
 ```
-Dependencies are:
+Following are the dependencies of the convertor:
 ```
 1. headcomputation
 2. vibhakticomputation
 ```
-Set the environment variable ssf2conll to conll converter folder in ~/.bashrc as 
+Set the environment variable ssf2conll to the converter directory in ~/.bashrc as:
 ```
-export ssf2conll="PATH OF CONLL CONVERTER FOLDER"
+export ssf2conll="/home/usr/SSF-to-CONLL-Convertor"
 ```
