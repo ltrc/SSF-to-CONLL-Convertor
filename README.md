@@ -1,10 +1,10 @@
 USAGE:
 ```
-bash ssf2conll.sh <file|directory> <output file> <log file> <annotation type (intra|inter)>
+bash ssf2conll.sh <input (file|directory)> <output file> <log file> <annotation type (intra|inter)>
 ```
 The data should be in ssf format. Inter-Chunk dependecies should be formatted as in the following:
 ```
-<Sentence id='10'>
+<Sentence id='1'>
 1       ((      NP      <fs name='NP' drel='k1:VGF'>
 1.1     mEM     PRP     <fs af='mEM,pn,any,sg,1,d,0,0' name='mEM' posn='10'>
 1.2     wo      RP      <fs af='wo,avy,,,,,,' name='wo' posn='20'>
