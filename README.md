@@ -1,10 +1,10 @@
-
-USAGE :: bash ssf2conll.sh file/directory output file log file"
-
+USAGE:
+```
+bash ssf2conll.sh file/directory output file log file"
+```
 Input Data can either be a file or a folder.
 
-The data should be in ssf formatt. 
-Inter-Chunk dependecies should be formatted as in the following:
+The data should be in ssf format. Inter-Chunk dependecies should be formatted as in the following:
 ```
 <Sentence id='10'>
 1       ((      NP      <fs name='NP' drel='k1:VGF'>
@@ -38,4 +38,7 @@ Dependencies are:
 1. headcomputation
 2. vibhakticomputation
 ```
-Set the environment variable ssf2conll to conll converter folder in ~/.bashrc as export ssf2conll="PATH OF CONLL CONVERTER FOLDER"
+Set the environment variable ssf2conll to conll converter folder in ~/.bashrc as 
+```
+export ssf2conll="PATH OF CONLL CONVERTER FOLDER"
+```
