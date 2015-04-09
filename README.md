@@ -4,7 +4,9 @@ __How to use?__
 ```
 bash ssf2conll.sh <input (file|directory)> <output file> <log file> <annotation type (intra|inter)>
 ```
-The data should be in SSF. Inter-Chunk dependecies should be formated as in the sentence below:
+__Input Data Format__: *Intra-Chunk vs Inter-Chunk*
+
+Inter-Chunk dependecies should be formated as in the sentence below:
 ```
 <Sentence id='1'>
 1       ((      NP      <fs name='NP' drel='k1:VGF'>
@@ -33,6 +35,8 @@ While Intra-Chunk dependencies should be in the expanded SSF format:
 4       .       SYM     <fs af='.,punc,,,,,,' drel='rsym:raha' posn='40' name='.' chunkId='BLK' chunkType='head:BLK'>
 </Sentence>
 ```
+__Output:__
+
 Output of Sentence 2 in CONLL would look like:
 ```
 1       Kusa    Kusa    adj     JJ      cat-adj|gen-any|num-any|pers-|case-|vib-|tam-|chunkId-JJP|chunkType-head|stype-|voicetype-      2       pof     _       _
@@ -40,6 +44,8 @@ Output of Sentence 2 in CONLL would look like:
 3       XUlIcanxa       XUlIcanxa       n       NNP     cat-n|gen-m|num-sg|pers-3|case-d|vib-0|tam-0|chunkId-NP|chunkType-head|stype-|voicetype-        2       rad     _       _
 4       .       .       punc    SYM     cat-punc|gen-|num-|pers-|case-|vib-|tam-|chunkId-BLK|chunkType-head|stype-|voicetype-   2       rsym    _       _
 ```
+__Dependencies__:
+
 Following are the dependencies of the convertor:
 ```
 1. headcomputation
