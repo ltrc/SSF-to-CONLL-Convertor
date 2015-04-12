@@ -34,7 +34,7 @@ class ConllConvertor (SanityChecker):
 			for idx, node in enumerate(self.nodeList):
 				if node.parent is None and node.depRel is None:
 					head_ = "0"
-					relation_ = "main"
+					relation_ = "root"
 				else:
 					head_ = [str(idy+1) for idy, nodey in enumerate(self.nodeList) \
 							if nodey.headType == node.parent][0]
