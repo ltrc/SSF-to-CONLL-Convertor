@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
 if [[ $# -eq 4 ]]; then
 	echo -n "" > $2
@@ -21,9 +21,11 @@ if [[ -d $INPUT ]]; then
 			echo $input >> $LOGFILE
 			if [[ $annotationType == "inter" ]];then
 			python $ssf2conll/src/run_dependencies.py $input head_vib.temp $LOGFILE
-			python $ssf2conll/src/ssfToConll.py --input-file head_vib.temp --output-file $OUTPUT --log-file $LOGFILE --annotation $annotationType
+			python $ssf2conll/src/ssfToConll.py --input-file head_vib.temp --output-file $OUTPUT --log-file \
+				$LOGFILE --annotation $annotationType
 			elif [[ $annotationType == "intra" ]]; then
-			python $ssf2conll/src/ssfToConll.py --input-file $input --output-file $OUTPUT --log-file $LOGFILE --annotation $annotationType
+			python $ssf2conll/src/ssfToConll.py --input-file $input --output-file $OUTPUT --log-file \
+				$LOGFILE --annotation $annotationType
 			else
 				echo 'Type of annotation not defined. Exiting now!'
 				exit
@@ -33,9 +35,11 @@ if [[ -d $INPUT ]]; then
 else
 	if [[ $annotationType == "inter" ]];then
 		python $ssf2conll/src/run_dependencies.py $INPUT head_vib.temp $LOGFILE
-		python $ssf2conll/src/ssfToConll.py --input-file head_vib.temp --output-file $OUTPUT --log-file $LOGFILE --annotation $annotationType
+		python $ssf2conll/src/ssfToConll.py --input-file head_vib.temp --output-file $OUTPUT --log-file \
+			$LOGFILE --annotation $annotationType
 	elif [[ $annotationType == "intra" ]]; then
-		python $ssf2conll/src/ssfToConll.py --input-file $INPUT --output-file $OUTPUT --log-file $LOGFILE --annotation $annotationType
+		python $ssf2conll/src/ssfToConll.py --input-file $INPUT --output-file $OUTPUT --log-file \
+			$LOGFILE --annotation $annotationType
 	else
 		echo 'Type of annotation not defined. Exiting now!'
 			exit
