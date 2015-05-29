@@ -18,8 +18,7 @@ class SanityChecker (SSFReader) :
     self.node = namedtuple('node',
     ('wordForm', 'posTag', 'lemmaFeatures', 'chunkType', 'depRel', 'parent', 'stype','voicetype'))
     self.features = namedtuple('features',
-    ('lemma','cat','gen','num','per','case','vib','tam'))
-		"""
+    ('lemma','cat','gen','num','per','case','vib','tam')) """
 
 	def ifCycle_ (self, node_):	
 		parent_ = self.modifierModified[node_]
