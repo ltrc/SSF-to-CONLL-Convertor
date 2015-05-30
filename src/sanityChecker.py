@@ -3,23 +3,10 @@
 __Author__ = "Riyaz Ahmad Bhat"
 __Email__  = "riyaz.ah.bhat@gmail.com"
 
-from ssfReader import SSFReader
+class SanityChecker (object) :
 
-
-class SanityChecker (SSFReader) :
-
-	def __init__(self, sentence, annotation):
-		super(SanityChecker, self).__init__(sentence, annotation)
-		self.getAnnotations()
-
-		""" Super Class Methods and Attributes
-		self.modifierModified = dict()
-    self.nodeList = list()
-    self.node = namedtuple('node',
-    ('wordForm', 'posTag', 'lemmaFeatures', 'chunkType', 'depRel', 'parent', 'stype','voicetype'))
-    self.features = namedtuple('features',
-    ('lemma','cat','gen','num','per','case','vib','tam')) """
-
+	def __init__(self):pass
+	
 	def ifCycle_ (self, node_):	
 		parent_ = self.modifierModified[node_]
 		if parent_ is None:

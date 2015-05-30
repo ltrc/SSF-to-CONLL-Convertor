@@ -7,10 +7,12 @@ __Email__ = "riyaz.ah.bhat@gmail.com"
 import re
 from collections import namedtuple
 
-class SSFReader (object):
+from sanityChecker import SanityChecker
+
+class SSFReader (SanityChecker):
 	
 	def __init__ (self, sentence, annotation):
-
+		super(SSFReader, self).__init__()
 		self.sentence = sentence
 		self.modifierModified = dict()
 		self.nodeList = list()

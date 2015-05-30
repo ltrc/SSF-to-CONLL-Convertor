@@ -5,12 +5,12 @@ __Email__  = "riyaz.ah.bhat@gmail.com"
 
 
 from ssfReader import SSFReader
-from sanityChecker import SanityChecker
 
-class ConllConvertor (SanityChecker):
+class ConllConvertor (SSFReader):
 
 	def __init__(self, sentence, annotation):
 		super(ConllConvertor, self).__init__(sentence, annotation)
+		self.getAnnotations()
 		self.check_ = self.treeSanity()
 		#self.check_ = False #NOTE for raw data
 		""" Super Class Methods and Attributes
