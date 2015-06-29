@@ -123,6 +123,7 @@ if __name__ == "__main__":
 				outputFile.write(output_+"\n\n")
 				logFile.write("<Sentence id="+sentence_ids[idx]+">"+" converted\n")
 
-logFile.close()
-allTokens.close()
-outputFile.close()
+	logFile.close()
+	outputFile.close()
+	if args.annotation == "inter":allTokens.close()
+
