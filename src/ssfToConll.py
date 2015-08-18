@@ -33,7 +33,7 @@ class ConllConvertor (SSFReader):
 			yield "#Error :: "+self.check_
 		else:
 			for idx, node in enumerate(self.nodeList):
-				if node.parent is None and node.depRel is None:
+				if node.parent == None and node.depRel == None:
 					head_ = "0"
 					relation_ = "root"
 				else:
@@ -41,7 +41,7 @@ class ConllConvertor (SSFReader):
 							if nodey.headType == node.parent][0]
 					relation_ = node.depRel
 
-				if node.lemmaFeatures.lemma is None:
+				if node.lemmaFeatures.lemma == None:
 					lemma_ = node.wordForm.lower()
 				else:
 					lemma_ = node.lemmaFeatures.lemma
