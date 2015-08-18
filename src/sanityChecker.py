@@ -9,7 +9,7 @@ class SanityChecker (object) :
 	
 	def ifCycle_ (self, node_):	
 		parent_ = self.modifierModified[node_]
-		if parent_ is None:
+		if parent_ == None:
 			return
 		else:
 			self.ifCycle_(parent_)
@@ -18,10 +18,10 @@ class SanityChecker (object) :
 		if (self.nodeList) < 2:
 			return "#single chunk sentence"
 		else:
-			if self.modifierModified.values().count(None) is 0:
+			if self.modifierModified.values().count(None) == 0:
 				return "#Root-less tree"
 			elif self.modifierModified.values().count(None) > 1 or len(\
-					[None for i in self.nodeList if i.depRel is None]) > 1:
+					[None for i in self.nodeList if i.depRel == None]) > 1:
 				return "#Forest, mulitple roots"
 			elif len(set(self.modifierModified.values()) - set(self.modifierModified.keys())) > 1:
 				difference = set(self.modifierModified.values()) - set(self.modifierModified.keys())
