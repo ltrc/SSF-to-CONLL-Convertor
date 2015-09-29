@@ -47,14 +47,14 @@ class SSFReader (SanityChecker):
 						else:
 							assert self.annotation in ["inter", "intra"]
 					elif key == "chunkType":
-						assert len(value.split(":")) == 2 # no need to process trash! FIXME
-						projection_, chunkId_ = re.sub("'|\"",'',value).split(":")
+						assert len(value.split(":",1)) == 2 # no need to process trash! FIXME
+						projection_, chunkId_ = re.sub("'|\"",'',value).split(":",1)
 						assert projection_ and chunkId_ != "" # no need to process trash! FIXME
 					elif key == "head":
 						wordForm_ = value
 					elif key == "drel":
-						assert len(value.split(":")) == 2 # no need to process trash! FIXME
-						depRel_, parent_ = re.sub("'|\"",'',value).split(":")
+						assert len(value.split(":",1)) == 2 # no need to process trash! FIXME
+						depRel_, parent_ = re.sub("'|\"",'',value).split(":",1)
 						assert depRel_ and parent_ != "" # no need to process trash! FIXME
 					elif key == "stype":
 						stype_ = re.sub("'|\"",'',value)
