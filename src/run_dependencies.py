@@ -1,5 +1,11 @@
 #!/usr/bin/env python -*- coding:utf-8 -*-
 
+import re
+import os
+import sys
+import tempfile
+import commands
+
 def run_dependencies(inputFile):
 	sentencIds = re.findall('<Sentence id=(.*?)>', inputFile) 
 	ssfSentences = re.findall("<Sentence id=.*?>(.*?)</Sentence>", inputFile,re.S)
@@ -28,12 +34,6 @@ def run_dependencies(inputFile):
 
 if __name__ == "__main__":
 	
-	import re
-	import os
-	import sys
-	import tempfile
-	import commands
-
 	try:
 		assert sys.argv[1] and sys.argv[2] and sys.argv[3]
 	except Exception, error:
