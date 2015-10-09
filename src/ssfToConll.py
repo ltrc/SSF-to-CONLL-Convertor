@@ -125,4 +125,9 @@ if __name__ == "__main__":
 
 	logFile.close()
 	outputFile.close()
+<<<<<<< HEAD
 	if args.annotation == "inter": allTokens.close()
+=======
+	if args.annotation == "inter":allTokens.close()
+
+>>>>>>> 09f7a17b7807f440917062f9dcbb6e45136097f5
