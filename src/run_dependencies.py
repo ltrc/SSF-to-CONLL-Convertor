@@ -6,15 +6,15 @@ import sys
 import tempfile
 import commands
 
-def run_dependencies(inputFile):
-	sentencIds = re.findall('<Sentence id=(.*?)>', inputFile) 
-	ssfSentences = re.findall("<Sentence id=.*?>(.*?)</Sentence>", inputFile,re.S)
+def run_dependencies(input_):
+	ssfSentences = re.finditer("(<Sentence id=.*?>)(.*?)</Sentence>", input_, re.S)
 	headPath = "$ssf2conll/dependencies/headcomputation-1.8/"
 	vibPath = "$ssf2conll/dependencies/vibhakticomputation/"
 
-	for idx, sentence in enumerate(ssfSentences):
+	for sentence in ssfSentences:
+		sentenceId = sentence.group(1).replace("'", '"')
 		sentence = re.sub(r"<fs name='NULL(.*?)'>",r"<fs af='null,unk,,,,,,' name='NULL\1'>",\
-			   '<Sentence id="'+str(sentencIds[idx])[1:-1]+'">\n'+sentence.strip()+"\n</Sentence>\n") 
+			   sentenceId+sentence.group(2)+"</Sentence>\n") 
 			   # add af='' to null nodes.
 		temp = tempfile.NamedTemporaryFile()
 		try:
@@ -29,7 +29,7 @@ def run_dependencies(inputFile):
 
 		if "Killed" in [head[-1], vib[-1]]:
 			print "Process killed! Something wrong either with head or vibhakhti computation!"	
-			log_.write("<Sentence id="+str(sentencIds[idx])+">"+"#Error in head or vibhakhti computation\n")
+			log_.write(sentencId.strip()+"#Error in head or vibhakhti computation\n")
 
 
 if __name__ == "__main__":
@@ -44,12 +44,12 @@ if __name__ == "__main__":
 		output_ = sys.argv[2]
 		log_ = open(sys.argv[3],'a')
 		if os.path.isfile(os.path.abspath(input_)):
-			run_dependencies(open(input_).read())
+			with open(input_) as inputFile: run_dependencies(inputFile.read())
 		else:
 			for root,sub,files in os.walk(input_):
 				for file_ in files:
-					path = os.path.join(root,file_)
-					run_dependencies(open(path).read())
+					path_ = os.path.join(root,file_)
+					with open(path_) as inputFile: run_dependencies(inputFile.read())
 	if os.path.isfile(os.path.abspath("head.txt")):
 		os.remove(os.path.abspath("head.txt"))
 	log_.close()
