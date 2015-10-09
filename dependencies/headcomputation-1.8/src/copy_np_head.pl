@@ -20,6 +20,7 @@ sub copy_np_head
 	&copy_head_np("FRAGP",$sent,$vibh_home);
 	&copy_head_np("NULL__CCP",$sent,$vibh_home);
 	&copy_head_np("NULL__NP",$sent,$vibh_home);
+	&copy_head_np("NULL__RBP",$sent,$vibh_home);
 	#&print_tree();
 }	#End of Sub
 1;

@@ -1,0 +1,26 @@
+<Sentence id="1">
+1	((	NP	
+1.1	sAXAraNa	JJ	<fs af='sAXAraNa,n,m,sg,,o,,'>
+1.2	PitakarI	NN	<fs af='PitakarI,n,f,sg,,o,,'>
+1.3	kA	PSP	<fs af='kA,n,m,sg,,o,7,'>
+	))		
+2	((	NP	
+2.1	rAsAyanika	JJ	<fs af='rAsAyanika,adj,any,any,,,any,'>
+	))		
+3	((	NP	
+3.1	nAma	NN	<fs af='nAma,n,m,sg,,o,,'>
+	))		
+4	((	NP	
+4.1	poteSiyama	NNP	<fs af='poteSiyama,unk,,,,,,'>
+4.2	elyuminiyama	PRP	<fs af='elyuminiyama,unk,,,,,,'>
+	))		
+5	((	NP	
+5.1	salPeta	NN	<fs af='salPeta,unk,,,,,,'>
+	))		
+6	((	VGF	
+6.1	calA	VMC	<fs af='ho,v,m,sg,any,,,wA'>
+6.2	gayA	VM	<fs af='hE,v,any,pl,1,,,hE'>
+6.3	hE	VAUX	<fs af='&sdot;,punc,,,,,,'>
+6.3	.	SYM	<fs af='&sdot;,punc,,,,,,'>
+	))		
+</Sentence>

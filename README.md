@@ -51,7 +51,8 @@ Following are the dependencies of the convertor:
 1. headcomputation
 2. vibhakticomputation
 ```
-Set the environment variable ssf2conll to the converter directory in ~/.bashrc as:
+__Install__:
+Run the command in main directory:
 ```
-export ssf2conll="/home/usr/SSF-to-CONLL-Convertor"
+make install
 ```

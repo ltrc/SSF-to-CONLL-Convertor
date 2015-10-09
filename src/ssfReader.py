@@ -31,7 +31,7 @@ class SSFReader (SanityChecker):
 
 		for line in self.sentence.split("\n"):
 			if line.split("\t")[0].isdigit():
-				assert len(line.split("\t")) is 4 # no need to process trash! FIXME
+				assert len(line.split("\t")) == 4 # no need to process trash! FIXME
 				keyValue_pairs = self.FSPairs(line.split("\t")[3][4:-1])
 				for key,value in keyValue_pairs.items():
 					if key == "af":
@@ -47,14 +47,14 @@ class SSFReader (SanityChecker):
 						else:
 							assert self.annotation in ["inter", "intra"]
 					elif key == "chunkType":
-						assert len(value.split(":")) is 2 # no need to process trash! FIXME
-						projection_, chunkId_ = re.sub("'|\"",'',value).split(":")
+						assert len(value.split(":",1)) == 2 # no need to process trash! FIXME
+						projection_, chunkId_ = re.sub("'|\"",'',value).split(":",1)
 						assert projection_ and chunkId_ != "" # no need to process trash! FIXME
 					elif key == "head":
 						wordForm_ = value
 					elif key == "drel":
-						assert len(value.split(":")) is 2 # no need to process trash! FIXME
-						depRel_, parent_ = re.sub("'|\"",'',value).split(":")
+						assert len(value.split(":",1)) == 2 # no need to process trash! FIXME
+						depRel_, parent_ = re.sub("'|\"",'',value).split(":",1)
 						assert depRel_ and parent_ != "" # no need to process trash! FIXME
 					elif key == "stype":
 						stype_ = re.sub("'|\"",'',value)
@@ -104,7 +104,7 @@ class SSFReader (SanityChecker):
 
 	def morphFeatures (self, AF):
 		"LEMMA,CAT,GEN,NUM,PER,CASE,VIB,TAM"
-		assert len(AF[:-1].split(",")) is 8 # no need to process trash! FIXME
+		assert len(AF[:-1].split(",")) == 8 # no need to process trash! FIXME
 		lemma_,cat_,gen_,num_,per_,case_,vib_,tam_ = AF.split(",")
 
 		if len(lemma_.decode("utf-8")) > 1:
@@ -114,7 +114,7 @@ class SSFReader (SanityChecker):
 		
 		return lemma_,cat_,gen_,num_,per_,case_,vib_,tam_.strip("'")
 
-'''	
+#'''	
 if __name__ == "__main__":
 
 	import re

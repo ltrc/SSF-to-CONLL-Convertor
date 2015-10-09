@@ -47,8 +47,10 @@
 3.2	sWAna	NN	<fs af='sWAna,n,m,sg,,o,,'>
 	))		
 4	((	VGF	
-4.1	hE	VAUX	<fs af='hE,v,any,sg,2,,,hE'>
-4.2	.	SYM	<fs af='&sdot;,punc,,,,,,'>
+4.1	kiyA	VMC	<fs af='hE,v,any,sg,2,,,hE'>
+4.2	gayA	VM	<fs af='hE,v,any,sg,2,,,hE'>
+4.3	hE	VAUX	<fs af='hE,v,any,sg,2,,,hE'>
+4.4	.	SYM	<fs af='&sdot;,punc,,,,,,'>
 	))		
 </Sentence>
 <Sentence id="1">
@@ -258,6 +260,12 @@
 8.2	WA	VAUX	<fs af='WA,v,m,sg,any,,,WA'>
 8.3	.	SYM	<fs af='&sdot;,punc,,,,,,'>
 	))		
+9	((	NP	
+9.1	Asa	NSTC	<fs af='kara,v,m,sg,any,,,yA'>
+9.2	-	SYM	<fs af='WA,v,m,sg,any,,,WA'>
+9.3	pAsa	NST	<fs af='WA,v,m,sg,any,,,WA'>
+9.4	ke	PSP	<fs af='&sdot;,punc,,,,,,'>
+	))
 </Sentence>
 <Sentence id="1">
 1	((	NP	

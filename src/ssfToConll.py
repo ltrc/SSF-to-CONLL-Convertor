@@ -11,8 +11,8 @@ class ConllConvertor (SSFReader):
 	def __init__(self, sentence, annotation):
 		super(ConllConvertor, self).__init__(sentence, annotation)
 		self.getAnnotations()
-		self.check_ = self.treeSanity()
-		#self.check_ = False #NOTE for raw data
+		#self.check_ = self.treeSanity()
+		self.check_ = False #NOTE for raw data
 		""" Super Class Methods and Attributes
 		self.modifierModified = dict()
     self.nodeList = list()
@@ -33,7 +33,7 @@ class ConllConvertor (SSFReader):
 			yield "#Error :: "+self.check_
 		else:
 			for idx, node in enumerate(self.nodeList):
-				if node.parent is None and node.depRel is None:
+				if node.parent == None and node.depRel == None:
 					head_ = "0"
 					relation_ = "root"
 				else:
@@ -41,7 +41,7 @@ class ConllConvertor (SSFReader):
 							if nodey.headType == node.parent][0]
 					relation_ = node.depRel
 
-				if node.lemmaFeatures.lemma is None:
+				if node.lemmaFeatures.lemma == None:
 					lemma_ = node.wordForm.lower()
 				else:
 					lemma_ = node.lemmaFeatures.lemma
@@ -102,27 +102,27 @@ if __name__ == "__main__":
 
 	if args.annotation == "inter": allTokens = open('allTokens.txt', 'a')
 	filePath = os.path.abspath(args.input)
+	logFile.write(filePath+"\n")
 	for idx,sentence in enumerate(sentences):
 		try:
 			convertor_object = ConllConvertor(sentence.strip(), args.annotation)
 			output_ = "\n".join(convertor_object.convert())
 		except Exception, error:
 			#logFile.write(filePath+" "+sentence_ids[idx]+" #Error :: Wrong ssf formatt!\n")
-			logFile.write("<Sentence id="+sentence_ids[idx]+">"+" #Error "+str(error)+" :: Wrong ssf formatt!\n")
+			#logFile.write("<Sentence id="+sentence_ids[idx]+">"+" #Error "+str(error)+" :: Wrong ssf formatt!\n")
+			logFile.write("<Sentence id=%s> #Error %s :: Wrong SSF format!\n" % (sentence_ids[idx], str(error)))
 		else:
 			if output_.startswith("#Error"):
-				logFile.write("<Sentence id="+sentence_ids[idx]+">"+" "+output_+"\n")
+				#logFile.write("<Sentence id="+sentence_ids[idx]+">"+" "+output_+"\n")
+				logFile.write("<Sentence id=%s> %s\n" % (sentence_ids[idx], output_))
 			else:
 				if args.annotation == "inter":
-					'''
-					for token in convertor_object.tokens:
-						allTokens.write(token+"\n")
-					allTokens.write("\n")'''
 					tokens = " ".join([token.split("\t")[0] for token in convertor_object.tokens])
 					allTokens.write(tokens+"\n")
 				outputFile.write(output_+"\n\n")
-				logFile.write("<Sentence id="+sentence_ids[idx]+">"+" converted\n")
+				#logFile.write("<Sentence id="+sentence_ids[idx]+">"+" converted\n")
+				logFile.write("<Sentence id=%s> converted\n" % (sentence_ids[idx]))
 
-logFile.close()
-allTokens.close()
-outputFile.close()
+	logFile.close()
+	outputFile.close()
+	if args.annotation == "inter": allTokens.close()

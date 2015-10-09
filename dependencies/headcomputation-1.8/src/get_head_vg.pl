@@ -17,7 +17,7 @@ sub copy_head_vg
 	}
 	if($pos_tag =~ /^V/ )
 	{
-		$match = "V";
+		$match = "VM";
 	}
 	if($pos_tag =~ /^JJP/ )
 	{
@@ -32,7 +32,6 @@ sub copy_head_vg
 		$match = "RB";
 	}
 	
-
 	@np_nodes = &get_nodes(3,$pos_tag,$sent);
 	for($i=$#np_nodes; $i>=0; $i--)
 	{
@@ -44,7 +43,6 @@ sub copy_head_vg
 			#$f2=tokens(words) in dec order
 			#$f3=word tags
 			#$f4=feature structure
-
 			my($f0,$f1,$f2,$f3,$f4) = &get_fields($childs[$j],$sent);
 			$word=$f2;
 			$f4=~s/\//&sl/;
@@ -53,7 +51,8 @@ sub copy_head_vg
 			$f4=~s/</&angO/;
 			$f4=~s/>/&angC/;
 			$f4="<".$f4.">";
-			if($f3 =~ /^$match/)
+			#if($f3 =~ /^$match/) 
+			if($f3 eq $match) 
 			{
 				$new_fs = $f4;
 
@@ -141,7 +140,6 @@ sub copy_head_vg
 			&merge($fs_ptr,$new_fs_ptr,$sent);
 			$fs_string = &make_string($fs_ptr,$sent);
 			&modify_field($np_nodes[$i],4,$fs_string,$sent);
-
 		}
 	}
 }

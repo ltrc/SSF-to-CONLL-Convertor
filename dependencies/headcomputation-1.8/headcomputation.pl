@@ -23,7 +23,6 @@ if($head_home eq "")
 
 }
 
-
 my $src=$head_home . "/src";
 require "$head_home/API/shakti_tree_api.pl";
 require "$head_home/API/feature_filter.pl";
@@ -36,7 +35,6 @@ if ($input eq "")
 {
   $input="/dev/stdin";
 }
-
 
 &read_story($input);
 
