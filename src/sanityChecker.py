@@ -5,53 +5,29 @@ __Email__  = "riyaz.ah.bhat@gmail.com"
 
 class SanityChecker (object) :
 
-	def __init__(self):pass
-	
-	def ifCycle_ (self, node_):	
-		parent_ = self.modifierModified[node_]
-		if parent_ == None:
-			return
-		else:
-			self.ifCycle_(parent_)
+    def ifCycle_ (self, node_): 
+        parent_ = self.modifierModified[node_]
+        if parent_ == None:
+            return
+        else:
+            self.ifCycle_(parent_)
 
-	def treeSanity(self):
-		if (self.nodeList) < 2:
-			return "#single chunk sentence"
-		else:
-			if self.modifierModified.values().count(None) == 0:
-				return "#Root-less tree"
-			elif self.modifierModified.values().count(None) > 1 or len(\
-					[None for i in self.nodeList if i.depRel == None]) > 1:
-				return "#Forest, mulitple roots"
-			elif len(set(self.modifierModified.values()) - set(self.modifierModified.keys())) > 1:
-				difference = set(self.modifierModified.values()) - set(self.modifierModified.keys())
-				difference.remove(None)
-				return "#Unknown head(s) as "+"\t".join(difference)
-			else:# cycle
-				for node_ in self.modifierModified.keys():
-					try:
-						self.ifCycle_(node_)
-					except Exception,e:
-						return "#cycle in "+node_+"\t"+self.modifierModified[node_]
-
-
-'''
-if __name__ == "__main__":
-
-	import re
-	import sys
-
-	inputFile = open(sys.argv[1]).read()
-	
-	sentences = re.findall("<Sentence id=.*?>(.*?)</Sentence>",inputFile, re.S)
-
-	for idx,sentence in enumerate(sentences):
-		try:
-			obj=SanityChecker(sentence.strip())
-			check_ = "".join(obj.treeSanity())
-			print check_
-			print sentence
-		except:pass
-		
-		#if check_:print check_
-'''
+    def treeSanity(self):
+        if (self.nodeList) < 2:
+            return "#single chunk sentence"
+        else:
+            if self.modifierModified.values().count(None) == 0:
+                return "#Root-less tree"
+            elif self.modifierModified.values().count(None) > 1 or len(\
+                    [None for i in self.nodeList if i.depRel == None]) > 1:
+                return "#Forest, mulitple roots"
+            elif len(set(self.modifierModified.values()) - set(self.modifierModified.keys())) > 1:
+                difference = set(self.modifierModified.values()) - set(self.modifierModified.keys())
+                difference.remove(None)
+                return "#Unknown head(s) as %s" % ("\t".join(difference))
+            else:# cycle
+                for node_ in self.modifierModified.keys():
+                    try:
+                        self.ifCycle_(node_)
+                    except Exception,e:
+                        return "#cycle in %s\t%s" % (node_, self.modifierModified[node_])

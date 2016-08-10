@@ -23,9 +23,11 @@ if [[ -d $INPUT ]]; then
 			python $ssf2conll/src/run_dependencies.py $input head_vib.temp $LOGFILE
 			python $ssf2conll/src/ssfToConll.py --input-file head_vib.temp --output-file $OUTPUT --log-file \
 				$LOGFILE --annotation $annotationType
+			mv $OUTPUT $input
 			elif [[ $annotationType == "intra" ]]; then
 			python $ssf2conll/src/ssfToConll.py --input-file $input --output-file $OUTPUT --log-file \
 				$LOGFILE --annotation $annotationType
+			mv $OUTPUT $input
 			else
 				echo 'Type of annotation not defined. Exiting now!'
 				exit
